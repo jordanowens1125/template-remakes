@@ -1,0 +1,427 @@
+---
+title: "Pixel Perfect Websites"
+description: "Meta description for the page"
+preloadImg: "/assets/images/landing.jpg"
+permalink: "/"
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/css/local.css" />
+<link rel="stylesheet" href="/css/critical.css" />
+
+<!-- Script for Netlify Identity -->
+<script
+  defer
+  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+></script>
+<script defer>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+{% endblock %} {% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero">
+  <div class="cs-container">
+    <div class="cs-flex-group">
+      <h1 class="cs-title">Explore the World with Exciting People</h1>
+      <p class="cs-text">
+        Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius.
+        Nibh tortor id aliquet lectus proin nibh condimentum.
+      </p>
+      <a href="/about" class="cs-button-solid">Our Menu</a>
+    </div>
+  </div>
+  <div class="floating-cards">
+    <div class="card">
+      <h3>
+        <img
+          src="./assets/svgs/service1.svg"
+          aria-hidden="true"
+          alt="-"
+        />Breakfast
+      </h3>
+      <p>
+        Breakfast ranges from a full english breakfast to simple, delicious
+        pancakes.
+      </p>
+      <a href="#"
+        >Go to breakfast menu
+        <img src="./assets/svgs/arrow-right.svg" alt="" aria-hidden="true"
+      /></a>
+    </div>
+    <div class="card">
+      <h3>
+        <img
+          src="./assets/svgs/service1.svg"
+          aria-hidden="true"
+          alt="-"
+        />Breakfast
+      </h3>
+      <p>
+        Breakfast ranges from a full english breakfast to simple, delicious
+        pancakes.
+      </p>
+      <a href="#"
+        >Go to breakfast menu
+        <img src="./assets/svgs/arrow-right.svg" alt="" aria-hidden="true"
+      /></a>
+    </div>
+    <div class="card">
+      <h3>
+        <img
+          src="./assets/svgs/service1.svg"
+          aria-hidden="true"
+          alt="-"
+        />Breakfast
+      </h3>
+      <p>
+        Breakfast ranges from a full english breakfast to simple, delicious
+        pancakes.
+      </p>
+      <a href="#"
+        >Go to breakfast menu
+        <img src="./assets/svgs/arrow-right.svg" alt="" aria-hidden="true"
+      /></a>
+      <img
+        src="./assets//images/hanging-plants.png"
+        alt=""
+        srcset=""
+        aria-hidden="true"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-picture">
+    <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp" />
+    <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg" />
+    <img
+      aria-hidden="true"
+      decoding="async"
+      src="/assets/images/landing.jpg"
+      alt="new home"
+      width="2500"
+      height="1667"
+      loading="eager"
+    />
+  </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                  Menu                        -->
+<!-- ============================================ -->
+<section class="menu">
+  <div class="container">
+    <div class="content">
+      <h2>Our Specials</h2>
+      <!-- Menu Item -->
+      <h3>
+        Scrambled Eggs <span class="line"></span><span class="price">$10</span>
+      </h3>
+      <p>
+        Cooked over medium heat with unsalted butter to make the perfect
+        scrambled eggs.
+      </p>
+
+      <!-- Menu Item -->
+      <h3>
+        Scrambled Eggs <span class="line"></span><span class="price">$10</span>
+      </h3>
+      <p>
+        Cooked over medium heat with unsalted butter to make the perfect
+        scrambled eggs.
+      </p>
+    </div>
+  </div>
+  <div class="container container2">
+    <img
+      src="./assets/images/pancakes-index.avif"
+      alt="delicious pancakes"
+      aria-hidden="true"
+      loading="lazy"
+    />
+    <div class="content menu2">
+      <h3>
+        Scrambled Eggs <span class="line"></span><span class="price">$10</span>
+      </h3>
+      <p>
+        Cooked over medium heat with unsalted butter to make the perfect
+        scrambled eggs.
+      </p>
+
+      <!-- Menu Item -->
+      <h3>
+        Scrambled Eggs <span class="line"></span><span class="price">$10</span>
+      </h3>
+      <p>
+        Cooked over medium heat with unsalted butter to make the perfect
+        scrambled eggs.
+      </p>
+      <a href="#" class="buttonn-solid"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Community                   -->
+<!-- ============================================ -->
+<section id="community">
+  <div class="container">
+    <div class="content">
+      <h2>
+        Built for warm for the Hammon <span class="italic">community</span>
+      </h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quo
+        eveniet, vel cumque aperiam accusantium voluptates ab harum hic saepe
+        dicta quasi nisi eligendi sapiente reiciendis ipsam earum quos magnam.
+      </p>
+    </div>
+  </div>
+  <div class="image-group">
+    <img src="./assets/images/table.avif" alt="" loading="lazy" />
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                   -->
+<!-- ============================================ -->
+<section id="reviews">
+  <div class="container">
+    <div class="top">
+      <h2>What our community has to say</h2>
+      <div class="ratings">
+        <div class="stars">
+          <img
+            src="./assets/svgs/star.svg"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <img
+            src="./assets/svgs/star.svg"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <img
+            src="./assets/svgs/star.svg"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <img
+            src="./assets/svgs/star.svg"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <img
+            src="./assets/svgs/star.svg"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <span>4.5 ot of 5</span>
+        </div>
+        <span>534 customer reviews on <a href="#">Google</a></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="bottom">
+      <div class="review-card">
+        <div class="review-top">
+          <img
+            src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            alt=""
+            loading="lazy"
+            aria-hidden="true"
+            class="picture"
+          />
+          <span class="name">Charlotte Liam</span>
+          <div class="star-group">
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <span class="value">5.0</span>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            porro ipsam illum aliquid illo quidem commodi tempore laudantium
+            possimus libero quaerat, minus eum ad, voluptates alias, rerum quasi
+            esse nihil!
+          </p>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <img
+            src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            alt=""
+            loading="lazy"
+            aria-hidden="true"
+            class="picture"
+          />
+          <span class="name">Charlotte Liam</span>
+          <div class="star-group">
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <span class="value">5.0</span>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            porro ipsam illum aliquid illo quidem commodi tempore laudantium
+            possimus libero quaerat, minus eum ad, voluptates alias, rerum quasi
+            esse nihil!
+          </p>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <img
+            src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            alt=""
+            loading="lazy"
+            aria-hidden="true"
+            class="picture"
+          />
+          <span class="name">Charlotte Liam</span>
+          <div class="star-group">
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              src="./assets/svgs/star.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <span class="value">5.0</span>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            porro ipsam illum aliquid illo quidem commodi tempore laudantium
+            possimus libero quaerat, minus eum ad, voluptates alias, rerum quasi
+            esse nihil!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  CTA                         -->
+<!-- ============================================ -->
+<section class="cta">
+  <div class="container">
+    <div class="content">
+      <h2>
+        Built for warm for the Hammon <span class="italic">community</span>
+      </h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quo
+        eveniet, vel cumque aperiam accusantium voluptates ab harum hic saepe
+        dicta quasi nisi eligendi sapiente reiciendis ipsam earum quos magnam.
+      </p>
+    </div>
+  </div>
+  <div class="image-group">
+    <img src="./assets/images/table.avif" alt="" loading="lazy" />
+  </div>
+
+  {% endblock %}
+</section>

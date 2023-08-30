@@ -1,0 +1,89 @@
+---
+title: "Pixel Perfect Websites"
+description: "Meta description for the page"
+preloadImg: "/assets/images/landing.jpg"
+permalink: "/"
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/css/reset.css" />
+<link rel="stylesheet" href="/css/local.css" />
+<link rel="stylesheet" href="/css/critical.css" />
+
+<!-- Script for Netlify Identity -->
+<script
+  defer
+  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+></script>
+<script defer>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+{% endblock %} {% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+{% include 'components/index/hero.html' %}
+
+<!-- ============================================ -->
+<!--                  Flex Group                  -->
+<!-- ============================================ -->
+
+{% include 'components/index/icon-flex-group.html' %}
+
+<!-- ============================================ -->
+<!--                 Clients Banner               -->
+<!-- ============================================ -->
+
+{% include 'components/index/clients.html' %}
+
+<!-- ============================================ -->
+<!--            Welcome                           -->
+<!-- ============================================ -->
+
+
+<!-- ============================================ -->
+<!--                   Why Choose Us              -->
+<!-- ============================================ -->
+{% include 'components/index/why-choose-us.html' %}
+
+<!-- ============================================ -->
+<!--                   Data             -->
+<!-- ============================================ -->
+{% include 'components/index/data.html' %}
+
+<!-- ============================================ -->
+<!--                   Why We Offer               -->
+<!-- ============================================ -->
+{% include 'components/index/what-we-offer.html' %}
+
+<!-- ============================================ -->
+<!--                   Free Trial                 -->
+<!-- ============================================ -->
+{% include 'components/index/free-trial.html' %}
+
+
+<!-- ============================================ -->
+<!--                   News                       -->
+<!-- ============================================ -->
+{% include 'components/index/News.html' %}
+
+<!-- ============================================ -->
+<!--                   Subscribe                  -->
+<!-- ============================================ -->
+{% include 'components/index/subscribe.html' %}
+
+{% endblock %}
+
+
