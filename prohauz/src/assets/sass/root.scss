@@ -8,13 +8,22 @@
 @media only screen and (min-width: 0em) {
   // Website colors
   :root {
-    --primary: #ffa800;
-    --primaryLight: #ffd675;
+    --primary: rgb(42, 197, 179);
+    --primaryLight: rgb(16, 133, 119);
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
-    --headerColor: #1a1a1a;
-    --bodyTextColor: #4e4b66;
+    --headerColor: #131111;
     --bodyTextColorWhite: #fafbfc;
+    --bodyTextColor: #3a3a3a;
+    
+    --borderColor:#dadada;
+
+
+    /* background colors */
+    --primary-bg-color: rgb(245, 247, 250);
+    --copyright-bg-color: yellow;
+    --banner-bg-color: purple;
+    --light-bg: rgb(219, 255, 250);
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -24,12 +33,153 @@
 
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+
+    /* padding */
+    --p-xs: 5px;
+    --p-sm: 10px;
+    --p-md: 25px;
+    --p-lg: 40px;
+
+    /* border radius */
+    --b-radius: 4px;
+
+    // max-width
+    --maxContainerWidth: 1200px;
   }
 
-  .cs-icon {
-    //first make icon black then invert makes it white then add color
-    filter: brightness(0) invert(1) opacity(0.5) drop-shadow(0 0 0 var(--primary)) saturate(1000%);
+  body {
+    background-color: var(--primary-bg-color);
+    color: var(--bodyTextColor);
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--headerColor);
+    font-weight: bold;
+  }
+
+  /* root info */
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  section {
+    padding: var(--sectionPadding);
+    margin: auto;
+    border-radius: var(--b-radius);
+  }
+
+  /* Text color */
+  .primary {
+    color: var(--primary);
+    fill: var(--primary);
+    /* filter:  brightness(0) invert(1)  saturate(3); */
+  }
+
+  .white {
+    color: var(--bodyTextColorWhite);
+    fill: var(--bodyTextColorWhite);
+  }
+
+  /* buttons */
+  button,
+  .button {
+    width: fit-content;
+    border: none;
+    background-color: transparent;
+    border-radius: var(--b-radius);
+    padding: var(--p-md);
+  }
+
+  a:hover,
+  button:hover,
+  .button:hover {
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: var(--primary);
+    color: var(--headerColor);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+
+  .btn-tp {
+    border: 1px solid var(--primary);
+    color: var(--headerColor);
+  }
+
+  /* End of button */
+
+  textarea {
+    resize: none;
+    border-radius: var(--b-radius);
+  }
+
+  input,
+  select,
+  textarea {
+    outline: none;
+    padding: var(--p-sm);
+    border-radius: var(--b-radius);
+    border: 1px solid var(--borderColor);
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border: 1px solid var(--primary);
+  }
+  /* End of inputs */
+
+  /* img */
+  img {
+    border-radius: var(--b-radius);
+    object-fit: contain;
+  }
+  /*  */
+
+  /* Change img color */
+  .cs-icon {
+    /* first make icon black then invert makes it white then add color */
+    filter: brightness(0) invert(1) opacity(0.5)
+      drop-shadow(0 0 0 var(--primary)) saturate(1000%);
+  }
+
+  .white-icon {
+    filter: brightness(0) invert(1) drop-shadow(0 0 0 var(--white))
+      saturate(1000%);
+  }
+
+  .nav-menu:hover,
+  .nav-close-menu:hover {
+    cursor: pointer;
+    filter: brightness(0) invert(1) opacity(0.5)
+      drop-shadow(0 0 0 var(--primary)) saturate(1000%);
+  }
+
+  /* flex  */
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-md);
+  }
+
+  .row {
+    display: flex;
+    gap: var(--p-sm);
+    align-items: center;
+  }
+  /*  */
 
   // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
   .cs-topper {
@@ -164,8 +314,16 @@
 
   .container {
     position: relative;
-    width: 92%;
     margin: auto;
+    max-width: var(--maxContainerWidth);
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.9rem, 3.5vw, 2.875rem);
   }
 
   h1,
@@ -178,17 +336,19 @@
     color: var(--headerColor);
   }
 
-  p,
-  li,
-  a {
-    font-size: calc(18 / 16 * 1rem);
-    line-height: 27/18em;
-    margin: 0;
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: clamp(1.2rem, 1.25vw, 1.8rem);
   }
 
   p,
-  li {
-    color: #353535;
+  li,
+  a {
+    font-size: calc(16 / 16 * 1rem);
+    line-height: 27/18em;
+    margin: 0;
   }
 
   a,
@@ -244,7 +404,7 @@
     padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: var(--primary-bg-color);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
@@ -311,6 +471,7 @@
         object-fit: contain;
         /* places the image to the left edge of the parent */
         object-position: left;
+        border-radius: var(--b-radius);
       }
     }
 
@@ -391,7 +552,7 @@
     .cs-ul-wrapper {
       height: 100vh;
       opacity: 0;
-      background-color: #fff;
+      background-color: var(--primary-bg-color);
       box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
       overflow: hidden;
       position: absolute;
@@ -507,7 +668,7 @@
       }
 
       .cs-line {
-        background-color: #fff;
+        background-color: var(--primary-bg-color);
       }
 
       .cs-ul-wrapper {
@@ -591,7 +752,7 @@
       &.cs-drop-link {
         /* 14px - 16px */
         font-size: clamp(0.875rem, 2vw, 1.25rem);
-        color: #fff;
+        color: var(--primary-bg-color);
       }
     }
   }
@@ -627,7 +788,7 @@
       min-width: calc(200 / 16 * 1rem);
       margin: 0;
       padding: 0;
-      background-color: #fff;
+      background-color: var(--primary-bg-color);
       overflow: hidden;
       opacity: 0;
       visibility: hidden;
@@ -766,7 +927,7 @@
 
     .cs-container {
       width: 100%;
-      max-width: calc(1280 / 16 * 1rem);
+      max-width: var(--maxContainerWidth);
       margin: auto;
       display: flex;
       justify-content: flex-end;
@@ -1270,7 +1431,7 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       width: 96%;
-      max-width: calc(1320 / 16 * 1rem);
+      max-width: var(--maxContainerWidth);
       margin: auto;
       padding: 0;
     }
