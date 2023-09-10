@@ -3,73 +3,113 @@
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-	#hero {
-		font-family: "Roboto", "Arial", sans-serif;
-		/* Centers button */
-		text-align: center;
-		/* changes on tablet */
-		position: relative;
-		z-index: 1;
-		/* prevents overflow from the lines extending past the screen width */
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		gap: var(--p-md);
-	}
+#hero {
+  background-color: #fff;
 }
 
-/* Tablet - 768px */
-@media only screen and (min-width: 48em) {
-	#hero {
-	}
+.top {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-/* Desktop Parallax Effect - 1300px */
-@media only screen and (min-width: 81.25em) {
-	#hero {
-	}
+.top i {
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  display: none;
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-	body.dark-mode {
-		#hero {
-			.cs-background {
-				&:before {
-					opacity: 0.8;
-				}
-			}
-		}
-	}
+i.left {
+  left: 20px;
 }
 
-/*-- -------------------------- -->
-<---          Services          -->
-<--- -------------------------- -*/
-
-/* Mobile */
-@media only screen and (min-width: 0em) {
-	
+i.right {
+  right: 20px;
 }
 
-/* Inbetween */
-@media only screen and (min-width: 768px) {
-	
+.top i:hover {
+  color: var(--primary);
+  cursor: pointer;
 }
 
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-	
+.top .container {
+  width: 100%;
+}
+
+.bottom {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: var(--primary-bg-color);
+  border-top: var(--primary) 5px solid;
+  border-radius: var(--b-radius);
+}
+
+.bottom .container {
+  color: var(--secondary);
+  flex: 1;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--p-md);
+  padding: var(--p-md);
+  padding-top: var(--p-lg);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: var(--p-xs);
+  padding: var(--p-s);
+}
+
+.item i {
+  font-size: 2.25rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  padding: var(--p-md);
+  color: #fff;
+  margin-bottom: var(--p-s);
+}
+
+@media screen and (min-width: 768px) {
+  .top i {
+    display: block;
+  }
+  .group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #hero {
+    padding: 0;
+  }
+  .bottom {
+    max-width: var(--maxContainerWidth);
+    margin: auto;
+    padding: 0;
+    width: 100%;
+  }
 }
 
 /* Dark mode */
 @media only screen and (min-width: 0em) {
-	body.dark-mode {
-		
-	}
+  body.dark-mode {
+  }
 }

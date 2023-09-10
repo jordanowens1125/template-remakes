@@ -28,8 +28,11 @@ eleventyNavigation:
     });
   }
 </script>
-{% endblock %} {% block body %}
-
+{% endblock %} 
+{% block body %}
+{% include 'components/index/hero.html' %} 
+{% include 'components/index/process.html' %} 
+{% include 'components/index/about-us.html' %} 
 {% include 'components/index/offer.html' %} 
 {% include 'components/index/blue-banner.html' %}
 {% include 'components/index/members.html' %}
