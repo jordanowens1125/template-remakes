@@ -1,0 +1,40 @@
+---
+title: "Pixel Perfect Websites"
+description: "Meta description for the page"
+preloadImg: "/assets/images/landing.jpg"
+permalink: "/"
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/css/local.css" />
+<link rel="stylesheet" href="/css/critical.css" />
+
+<!-- Script for Netlify Identity -->
+<script
+  defer
+  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+></script>
+<script defer>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+{% endblock %} {% block body %} {% include 'components/index/hero.html' %}{%
+include 'components/index/about-us.html' %} 
+{% include 'components/index/offer.html' %}
+{% include 'components/index/process.html' %} 
+{% include 'components/index/blue-banner.html' %} 
+{% include 'components/index/members.html' %} 
+{% include 'components/index/what-people-say.html' %}
+{% include 'components/index/book-online.html' %}
+<!-- {% include 'components/index/blogs.html'%}  -->
+{% endblock %}

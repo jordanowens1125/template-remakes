@@ -10,13 +10,16 @@
 
   body.dark-mode {
     --primary: rgb(1, 228, 201);
-    --dark: rgba(0, 21, 45);
+    --dark: #1c1c1c;
     --medium: #2c394b;
     --accent: #334756;
     --bodyTextColor: rgb(179, 180, 180);
-    --light-bg: rgba(1, 25, 54, 255);
-
+    --light-bg: #0f1b19;
+    --borderColor: rgb(190, 192, 192);
     background-color: var(--dark);
+    --primary-bg-color: var(--dark);
+    --secondary: rgb(152, 245, 234);
+
     h1,
     h2,
     h3,
@@ -35,6 +38,9 @@
     // show all dark classes
     .dark {
       display: block !important;
+    }
+    i {
+      color: #fff;
     }
   }
 }

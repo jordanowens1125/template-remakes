@@ -4,7 +4,7 @@
 <---           Hero             -->
 <--- -------------------------- -*/
 #hero {
-  background-color: #fff;
+  background-color: var(--light-bg);
 }
 
 .top {
@@ -43,7 +43,6 @@ i.right {
 }
 
 .bottom {
-  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -99,17 +98,17 @@ i.right {
 @media screen and (min-width: 1200px) {
   #hero {
     padding: 0;
+    margin-bottom:10%;
   }
   .bottom {
     max-width: var(--maxContainerWidth);
     margin: auto;
     padding: 0;
     width: 100%;
-  }
-}
-
-/* Dark mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid var(--light-bg);
   }
 }

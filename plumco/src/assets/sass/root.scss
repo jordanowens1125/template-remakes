@@ -44,7 +44,7 @@
     --b-radius: 4px;
 
     // max-width
-    --maxContainerWidth: 1200px;
+    --maxContainerWidth: 80rem;
   }
 
   body {
@@ -73,7 +73,7 @@
   }
 
   section {
-    padding: 5rem 2.5rem;
+    padding: var(--sectionPadding);
     margin: auto;
     border-radius: var(--b-radius);
     display: flex;
