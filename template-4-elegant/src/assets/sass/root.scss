@@ -9,9 +9,9 @@
   // Website colors
   :root {
     --primary-rgb: 42, 197, 179;
-    --primary: #0052da;
+    --primary: #3c7a89;
     --primaryLight: rgb(16, 133, 119);
-    --secondary: #f4b81c;
+    --secondary: #FB9038;
     --secondaryLight: #001f3f;
     --headerColor: #131111;
     --bodyTextColorWhite: #fafbfc;
@@ -24,7 +24,7 @@
     --primary-bg-color: #fff;
     --copyright-bg-color: yellow;
     --banner-bg-color: purple;
-    --light-bg: rgb(219, 255, 250);
+    --light-bg: #E6F4F1;
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -59,7 +59,6 @@
   h4,
   h5,
   h6 {
-    color: var(--headerColor);
     font-weight: bold;
   }
 
@@ -84,15 +83,41 @@
     flex-direction: column;
     align-items: center;
     gap: var(--p-md);
+    position: relative;
+  }
+  .section-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--p-lg);
+    font-size:clamp(1.5rem, 1.75vw, 2rem);
+    letter-spacing: 1.3px;
+    color: var(--primary);
+    text-transform: uppercase;
   }
 
-  section .heading {
-    text-align: center;
+  .group {
     display: flex;
-    gap: var(--p-md);
     flex-direction: column;
-    margin-top: var(--p-sm);
-    max-width: 80%;
+    align-items: center;
+    justify-content: center;
+    gap: var(--p-md);
+    text-align: center;
+    width: 100%;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--p-sm);
+    width: 100%;
+
+    .item-heading {
+      text-transform: uppercase;
+      color: var(--primary);
+      letter-spacing: 1.1px;
+    }
   }
 
   @media screen and (min-width: 765px) {
@@ -130,7 +155,7 @@
     width: fit-content;
     border: none;
     background-color: transparent;
-    border-radius: var(--b-radius);
+    border-radius: var(--b-radiuheas);
     padding: 12px 18px;
   }
 
@@ -177,9 +202,14 @@
   /* End of inputs */
 
   /* img */
+  .img-container {
+    width: 100%;
+    height: 100%;
+  }
   img {
-    border-radius: var(--b-radius);
     object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
   /*  */
 
@@ -209,10 +239,11 @@
     gap: var(--p-md);
   }
 
-  .col-centered{
+  .col-centered {
     display: flex;
     flex-direction: column;
-    align-items: center;justify-content: center;
+    align-items: center;
+    justify-content: center;
     gap: var(--p-lg);
   }
 
@@ -361,8 +392,6 @@
     width: 100%;
   }
 
-  
-
   h1 {
     font-size: clamp(2rem, 5vw, 3rem);
   }
@@ -378,7 +407,6 @@
   h5,
   h6 {
     margin: 0;
-    color: var(--headerColor);
   }
 
   h3,
@@ -1187,7 +1215,7 @@
   #cta {
     position: relative;
     padding: calc(50 / 16 * 1rem) 0;
-    
+
     &:before {
       content: "";
       position: absolute;
