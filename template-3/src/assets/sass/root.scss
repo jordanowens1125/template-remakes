@@ -21,6 +21,7 @@
     --borderColor: #dadada;
     --secondary-bg-color: #f5f8fe;
     --white: #fafafa;
+    --black: #0a0909;
     /* background colors */
     --primary-bg-color: #fff;
     --copyright-bg-color: yellow;
@@ -684,7 +685,7 @@
 @media only screen and (max-width: 63.9375rem) {
   body.dark-mode {
     #cs-navigation {
-      background-color: var(--dark);
+      box-shadow: rgba(0, 0, 0, 0.541) 0px 8px 24px;
 
       .cs-logo {
         /* makes it white */
@@ -944,7 +945,7 @@
     padding: 0 calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: var(--primary-bg-color);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
@@ -1043,7 +1044,6 @@
 @media only screen and (min-width: 64rem) {
   body.dark-mode {
     #cs-navigation {
-      background-color: var(--dark);
 
       .cs-logo {
         /* makes it turn white */
