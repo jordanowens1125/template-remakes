@@ -14,13 +14,13 @@
   }
 
   body.dark-mode {
-    --primary-bg-color: #1c3971;
+    --primary-bg-color: #252121;
     --borderColor: #5c709b;
-    --primary-rbg: 159, 207, 252;
-    --primary: rgb(159, 207, 252);
+    --primary-rbg: 20, 138, 248;
+    --primary: rgb(20, 138, 248);
 
     .overlay {
-      background: rgba( 159, 207, 252, 0.78);
+      background: rgba(20, 138, 248, 0.78);
     }
 
     p,

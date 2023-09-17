@@ -8,8 +8,8 @@
 @media only screen and (min-width: 0em) {
   // Website colors
   :root {
-    --primary-rgb: 42, 197, 179;
-    --primary: #0052da;
+    --primary-rgb: 112, 24, 253;
+    --primary: rgb(83, 4, 211);
     --primaryLight: rgb(16, 133, 119);
     --secondary: #f4b81c;
     --secondaryLight: #001f3f;
@@ -45,7 +45,7 @@
     --b-radius: 4px;
 
     // max-width
-    --maxContainerWidth: 80rem;
+    --maxContainerWidth: 90rem;
   }
 
   body {
@@ -73,55 +73,48 @@
     color: inherit;
   }
 
-  main > :nth-child(even):not(#cta):not(#blue-banner) {
-    background-color: var(--secondary-bg-color);
-  }
   section {
     padding: var(--sectionPadding);
     margin: auto;
-    border-radius: var(--b-radius);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--p-md);
+    border: 1px solid var(--borderColor);
   }
 
   section .heading {
-    text-align: center;
-    display: flex;
-    gap: var(--p-md);
-    flex-direction: column;
-    margin-top: var(--p-sm);
-    max-width: 80%;
   }
 
-  @media screen and (min-width: 765px) {
-    section {
-      padding: var(--sectionPadding);
-    }
-    section .heading {
-      max-width: 60%;
-    }
+  section .sub-heading {
+    color: var(--primary);
+  }
+
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-sm);
+  }
+
+  .item-heading {
+  }
+
+  .item-sub {
   }
 
   /* Text color */
   .primary {
     color: var(--primary);
     fill: var(--primary);
-    /* filter:  brightness(0) invert(1)  saturate(3); */
   }
 
   .secondary {
     color: var(--secondary);
   }
 
-  .dark-primary {
-    color: var(--black);
-  }
-
   .white {
     color: var(--bodyTextColorWhite);
-    fill: var(--bodyTextColorWhite);
   }
 
   /* buttons */
@@ -180,6 +173,12 @@
   img {
     border-radius: var(--b-radius);
     object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+  .img-container {
+    width: 100%;
+    height: 100%;
   }
   /*  */
 
@@ -201,27 +200,6 @@
     filter: brightness(0) invert(1) opacity(0.5)
       drop-shadow(0 0 0 var(--primary)) saturate(1000%);
   }
-
-  /* flex  */
-  .col {
-    display: flex;
-    flex-direction: column;
-    gap: var(--p-md);
-  }
-
-  .col-centered{
-    display: flex;
-    flex-direction: column;
-    align-items: center;justify-content: center;
-    gap: var(--p-lg);
-  }
-
-  .row {
-    display: flex;
-    gap: var(--p-sm);
-    align-items: center;
-  }
-  /*  */
 
   // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
   .cs-topper {
@@ -355,13 +333,9 @@
   }
 
   .container {
-    position: relative;
-    margin: auto;
     max-width: var(--maxContainerWidth);
     width: 100%;
   }
-
-  
 
   h1 {
     font-size: clamp(2rem, 5vw, 3rem);
@@ -1187,7 +1161,7 @@
   #cta {
     position: relative;
     padding: calc(50 / 16 * 1rem) 0;
-    
+
     &:before {
       content: "";
       position: absolute;
@@ -1199,10 +1173,6 @@
       top: 0;
       left: 0;
       z-index: -1;
-    }
-
-    .container {
-      text-align: center;
     }
 
     picture {
