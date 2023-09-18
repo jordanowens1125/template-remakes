@@ -41,9 +41,9 @@
     --p-s: 8px;
     --p-sm: 12px;
     --p-md: 24px;
-    --p-ml:32px;
+    --p-ml: 32px;
     --p-lg: 40px;
-    --p-xl:56px;
+    --p-xl: 56px;
 
     /* border radius */
     --b-radius: 4px;
@@ -108,6 +108,9 @@
       var(--primary-bg-color) 2.23%,
       var(--borderColor) 97.21%
     );
+    text-transform: uppercase;
+    font-size: clamp(.8rem, 1.1vw, 2rem);
+    letter-spacing: 1.5px;
   }
   .content {
     .sub-heading,

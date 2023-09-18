@@ -54,9 +54,12 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
+    .content {
+      grid-column-start: 2;
+    }
     .img-container {
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
       width: 45%;
     }
@@ -64,6 +67,7 @@
 }
 
 .skills-section {
+  background-color: var(--borderColor);
   .skills {
     display: flex;
     flex-direction: column;
@@ -131,7 +135,7 @@
         color: var(--secondary);
         border-radius: var(--b-radius);
         padding: var(--p-md);
-        background-color: var(--borderColor);
+        background-color: var(--primary-bg-color);
         border-left: 5px var(--secondary) solid;
         font-size: 1.5rem;
       }
@@ -146,16 +150,13 @@
       gap: var(--p-lg);
       grid-template-columns: repeat(2, 1fr);
     }
-    .content {
-      grid-column-start: 2;
-    }
     .row {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
     .img-container {
       position: absolute;
-      left: 0;
+      right: 0;
       width: 50%;
       top: 0;
       padding: var(--p-md);
@@ -177,11 +178,11 @@
     margin: auto;
     gap: var(--p-md);
     justify-content: space-between;
-    border: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--borderColor);
     border-radius: var(--b-radius);
-    -webkit-box-shadow: 0px 7px 60px 0px rgba(var(--borderColor-rgb), 0.85);
-    -moz-box-shadow: 0px 7px 60px 0px rgba(var(--borderColor-rgb), 0.85);
-    box-shadow: 0px 7px 60px 0px rgba(var(--borderColor-rgb), 0.85);
+    // -webkit-box-shadow: 0px 7px 60px 0px rgba(var(--borderColor-rgb), 0.85);
+    // -moz-box-shadow: 0px 7px 60px 0px rgba(var(--borderColor-rgb), 0.85);
+    // box-shadow: 0px 7px 60px 0px rgba(var(--borderColor-rgb), 0.85);
     background-color: var(--borderColor);
   }
 
@@ -207,7 +208,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--p-sm);
-    padding-bottom: var(--p-sm);
+    padding: var(--p-sm) 0;
     border-bottom: 3px transparent solid;
     cursor: pointer;
     transition: 0.3s;
@@ -225,6 +226,7 @@
   #about:checked ~ .tabs label[for="about"] {
     border-bottom: 3px var(--primary) solid;
     color: var(--primary);
+    background-color: var(--borderColor);
   }
 
   #home:checked ~ .tab-content .home-content,
@@ -552,7 +554,7 @@
   }
   .content {
     padding: var(--p-md);
-    text-align: center;
+    gap: var(--p-sm);
   }
 }
 
