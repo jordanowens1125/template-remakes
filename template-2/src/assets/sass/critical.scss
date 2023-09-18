@@ -12,15 +12,20 @@
   position: relative;
   align-items: center;
   justify-content: center;
+  padding-top: var(--navbarheight);
+
   .img-container,
   .content {
     flex: 1;
   }
-  
+
   .content {
     display: flex;
     flex-direction: column;
     gap: var(--p-md);
+    padding-top: var(--p-xl);
+    justify-content: center;
+    margin: auto;
   }
 }
 
