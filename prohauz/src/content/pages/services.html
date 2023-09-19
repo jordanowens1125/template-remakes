@@ -1,16 +1,19 @@
 ---
-title: "About"
+title: "Services"
 description: "Meta description for the page"
 preloadImg: "/assets/images/cabinets2.jpg"
-permalink: "about/"
+permalink: "services/"
 eleventyNavigation:
-  key: About Us
-  order: 200
+  key: Services
+  order: 300
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
-<link rel="stylesheet" href="/css/about.css" />
+<link rel="stylesheet" href="/css/services.css" />
 {% endblock %} {% block body %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
 
 <section id="int-hero">
   <h1 id="home-h">Services</h1>
@@ -33,8 +36,6 @@ eleventyNavigation:
 </section>
 
 
-{% include 'components/about/ceo.html' %}
-{% include 'components/about/our-work.html' %}
-{% include 'components/about/our-team.html' %}
+{% include 'components/services/services.html' %}
 
 {% endblock %}

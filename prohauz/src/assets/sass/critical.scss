@@ -6,7 +6,7 @@
 #hero {
   background-color: var(--light-bg);
   .top {
-    min-height: 90vh;
+    min-height: 97.5vh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -79,7 +79,7 @@
     background-color: var(--primary);
     border-radius: 50%;
     padding: var(--p-md);
-    color: #fff;
+    color: var(--white);
     margin-bottom: var(--p-s);
   }
 }
@@ -91,7 +91,7 @@
     }
     .group {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
@@ -100,6 +100,9 @@
   #hero {
     padding: 0;
     margin-bottom: 10%;
+    .group {
+      grid-template-columns: repeat(4, 1fr);
+    }
     .bottom {
       max-width: var(--maxContainerWidth);
       margin: auto;
@@ -108,8 +111,8 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 0;
-      border: 3px solid var(--light-bg);
+      bottom: -15%;
+      border: 2px solid var(--primary);
     }
   }
 }

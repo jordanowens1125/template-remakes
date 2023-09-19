@@ -1,0 +1,33 @@
+.services {
+  text-align: center;
+  .heading {
+    margin-bottom: var(--p-md);
+  }
+  .item {
+    position: relative;
+    padding: var(--p-md);
+    border: 1px solid var(--borderColor);
+    transform-origin: bottom;
+    transition: .6s;
+    i {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: var(--primary);
+      transition: 0.4s;
+    }
+  }
+  .item:hover {
+    background-color: var(--primary);
+    color: var(--primary-bg-color);
+    i {
+      color: inherit;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .services {
+    .group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
