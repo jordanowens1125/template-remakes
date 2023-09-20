@@ -9,7 +9,7 @@
   // Website colors
   :root {
     --primary-rgb: 42, 197, 179;
-    --primary: rgb(42, 197, 179);
+    --primary: hwb(173 16% 22%);
     --primaryLight: rgb(16, 133, 119);
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
@@ -499,7 +499,6 @@
         object-fit: contain;
         /* places the image to the left edge of the parent */
         object-position: left;
-        border-radius: var(--b-radius);
       }
     }
 
@@ -684,31 +683,6 @@
   }
 }
 
-/* Dark Mode */
-@media only screen and (max-width: 63.9375rem) {
-  body.dark-mode {
-    #cs-navigation {
-      background-color: var(--dark);
-
-      .cs-logo {
-        /* makes it white */
-        filter: grayscale(1) brightness(1000%);
-      }
-
-      .cs-line {
-        background-color: var(--white);
-      }
-
-      .cs-ul-wrapper {
-        background-color: var(--medium);
-      }
-
-      .cs-li-link {
-        color: var(--bodyTextColorWhite);
-      }
-    }
-  }
-}
 
 /*-- -------------------------- -->
 <---     Navigation Dropdown    -->
@@ -911,29 +885,6 @@
   }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode {
-    #cs-navigation {
-      .cs-drop-ul {
-        background-color: var(--dark);
-      }
-
-      .cs-li-link {
-        &.cs-drop-link {
-          &:hover {
-            background-color: var(--medium);
-          }
-        }
-      }
-
-      .cs-drop-icon {
-        /* turns it white */
-        filter: grayscale(1) brightness(1000%);
-      }
-    }
-  }
-}
 
 /*-- -------------------------- -->
 <---     Desktop Navigation     -->
@@ -1038,30 +989,6 @@
         bottom: calc(0 / 16 * 1rem);
         left: 0;
         transition: width 0.3s;
-      }
-    }
-  }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 64rem) {
-  body.dark-mode {
-    #cs-navigation {
-      background-color: var(--dark);
-
-      .cs-logo {
-        /* makes it turn white */
-        filter: grayscale(1) brightness(1000%);
-      }
-
-      .cs-li-link {
-        color: var(--bodyTextColorWhite);
-      }
-
-      .cs-li-link {
-        &:before {
-          background-color: var(--primaryLight);
-        }
       }
     }
   }
@@ -1280,17 +1207,6 @@
         top: 0;
         left: 0;
         z-index: 1;
-      }
-    }
-  }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode {
-    #cta {
-      &:after {
-        display: none;
       }
     }
   }
@@ -1540,11 +1456,3 @@
   }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode {
-    #footer {
-      background: #061623;
-    }
-  }
-}

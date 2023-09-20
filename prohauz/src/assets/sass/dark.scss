@@ -10,13 +10,14 @@
 
   body.dark-mode {
     --primary: rgb(1, 228, 201);
-    --dark: #1c1c1c;
+    --dark-rbg: 36, 46, 66;
+    --dark: rgb(var(--dark-rbg));
     --medium: #2c394b;
     --accent: #334756;
-    --bodyTextColor: rgb(179, 180, 180);
-    --light-bg: #0f1b19;
-    background-color: var(--dark);
-    --primary-bg-color: var(--dark);
+    --bodyTextColor: #dadce0;
+    --light-bg: #36445e;
+
+    --primary-bg-color: #2f3b52;
     --secondary: rgb(152, 245, 234);
 
     h1,
@@ -108,6 +109,81 @@
   }
 }
 
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode {
+    #cs-navigation {
+      box-shadow: rgba(var(--dark-rbg), 0.2) 0px 8px 24px;
+      .cs-drop-ul {
+        background-color: var(--dark);
+      }
+
+      .cs-li-link {
+        &.cs-drop-link {
+          &:hover {
+            background-color: var(--medium);
+          }
+        }
+      }
+
+      .cs-drop-icon {
+        /* turns it white */
+        filter: grayscale(1) brightness(1000%);
+      }
+    }
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 64rem) {
+  body.dark-mode {
+    #cs-navigation {
+      background-color: var(--dark);
+
+      .cs-logo {
+        /* makes it turn white */
+        filter: grayscale(1) brightness(1000%);
+      }
+
+      .cs-li-link {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-li-link {
+        &:before {
+          background-color: var(--primaryLight);
+        }
+      }
+    }
+  }
+}
+
+/* Dark Mode */
+@media only screen and (max-width: 63.9375rem) {
+  body.dark-mode {
+    #cs-navigation {
+      background-color: var(--dark);
+
+      .cs-logo {
+        /* makes it white */
+        filter: grayscale(1) brightness(1000%);
+      }
+
+      .cs-line {
+        background-color: var(--white);
+      }
+
+      .cs-ul-wrapper {
+        background-color: var(--medium);
+      }
+
+      .cs-li-link {
+        color: var(--bodyTextColorWhite);
+      }
+    }
+  }
+}
+
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #dark-mode-toggle {
@@ -119,6 +195,26 @@
 
     &:hover {
       cursor: pointer;
+    }
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode {
+    #cta {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode {
+    #footer {
+      background: var(--dark);
     }
   }
 }
