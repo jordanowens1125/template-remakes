@@ -12,14 +12,14 @@
   padding: 0;
   position: relative;
   color: var(--white);
-  background-image: url('https://images.unsplash.com/photo-1604003706189-a959f802ad22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2t5c2NyYXBwZXJ8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=600');
+  background-image: url("https://images.unsplash.com/photo-1604003706189-a959f802ad22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2t5c2NyYXBwZXJ8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=600");
   background-repeat: no-repeat;
   background-size: cover;
   h1 {
     color: var(--white);
   }
-  .overlay{
-    background: rgba(var(--primary-rgb), 0.4);
+  .overlay {
+    background: rgba(0, 0, 0, 0.75);
   }
   #hero div {
     height: 100%;
