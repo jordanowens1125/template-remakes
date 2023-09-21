@@ -215,7 +215,7 @@
     flex-direction: column;
     gap: var(--p-sm);
     padding: var(--p-sm) 0;
-    border-bottom: 3px transparent solid;
+    border-bottom: 3px var(--borderColor) solid;
     cursor: pointer;
     transition: 0.3s;
   }
