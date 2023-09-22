@@ -25,7 +25,9 @@
     gap: var(--p-md);
     padding-top: var(--p-xl);
     justify-content: center;
-    margin: auto;
+    button {
+      width: fit-content;
+    }
   }
 }
 

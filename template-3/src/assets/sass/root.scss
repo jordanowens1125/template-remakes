@@ -62,10 +62,12 @@
   h4,
   h5,
   h6 {
-    color: var(--headerColor);
     font-weight: bold;
   }
 
+  .header-logo {
+    font-size: clamp(1rem, 2vw, 3.5rem);
+  }
   /* root info */
   ul {
     list-style: none;
@@ -350,16 +352,6 @@
     font-size: clamp(1.5rem, 3.2vw, 2.875rem);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
-    color: var(--headerColor);
-  }
-
   h3,
   h4,
   h5,
@@ -476,7 +468,6 @@
     }
 
     .cs-logo {
-      width: 40%;
       max-width: calc(146 / 16 * 1rem);
       height: 100%;
       margin: 0 auto 0 0;
@@ -1043,7 +1034,6 @@
 @media only screen and (min-width: 64rem) {
   body.dark-mode {
     #cs-navigation {
-
       .cs-logo {
         /* makes it turn white */
         filter: grayscale(1) brightness(1000%);
@@ -1301,7 +1291,7 @@
     background: #1c1c1c;
     padding: calc(84 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
     font-size: min(4vw, 1.2em);
-
+    color: var(--white);
     .left-section {
       margin: auto;
       margin-bottom: calc(50 / 16 * 1rem);
