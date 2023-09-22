@@ -68,6 +68,9 @@
     color: var(--headerColor);
     font-weight: bold;
   }
+  .header-logo {
+    font-size: clamp(1rem, 2vw, 3.5rem);
+  }
 
   /* root info */
   ul {
@@ -923,7 +926,7 @@
     }
 
     .cs-logo {
-      width: 18.4%;
+      // width: 18.4%;
       max-width: calc(350 / 16 * 1rem);
       height: calc(65 / 16 * 1rem);
       /* margin-right auto pushes everything away from it to the right */
