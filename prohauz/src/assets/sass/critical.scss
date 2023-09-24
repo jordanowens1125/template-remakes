@@ -81,6 +81,14 @@
     padding: var(--p-md);
     color: var(--white);
     margin-bottom: var(--p-s);
+    transition: 0.3s;
+    border: 2px solid var(--primary);
+  }
+  .item:hover {
+    i {
+      background-color: var(--primary-bg-color);
+      color: var(--primary);
+    }
   }
 }
 
@@ -121,10 +129,10 @@
   body.dark-mode {
     #hero {
       .group {
-        
-      }.bottom {
-          box-shadow: rgba(var(--dark-rbg), 0.8) 0px 8px 24px;
-        }
+      }
+      .bottom {
+        box-shadow: rgba(var(--dark-rbg), 0.8) 0px 8px 24px;
+      }
     }
   }
 }

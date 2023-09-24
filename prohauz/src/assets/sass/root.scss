@@ -32,7 +32,7 @@
     --bodyFontSize: 1rem;
 
     /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --sectionPadding: clamp(2.5rem, 7.82vw, 6.25rem) 1rem;
 
     /* padding */
     --p-xs: 4px;
@@ -87,6 +87,13 @@
     margin: auto;
     border-radius: var(--b-radius);
     position: relative;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    section {
+      text-align: unset;
+    }
   }
 
   .group {
@@ -248,10 +255,10 @@
     text-decoration: none;
     display: inline-block;
     width: auto;
-    line-height: calc(50 / 16 * 1em);
-    height: calc(50 / 16 * 1rem);
+    // line-height: calc(50 / 16 * 1em);
+    // height: calc(50 / 16 * 1rem);
     text-align: center;
-    padding: 0 calc(30 / 16 * 1rem);
+    padding: calc(3 / 4 * 1rem) calc(30 / 16 * 1rem);
     position: relative;
     z-index: 1;
     background-color: var(--primary);

@@ -252,9 +252,6 @@
     text-align: left;
     align-items: flex-start;
   }
-  .row {
-    justify-content: start;
-  }
   img {
     margin: auto;
   }
@@ -273,6 +270,7 @@
 
   .info {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     position: relative;
   }
@@ -315,6 +313,8 @@
   .row {
     display: flex;
     gap: var(--p-lg);
+    align-items: center;
+    justify-content: space-between;
     .item {
       display: flex;
       gap: var(--p-sm);
@@ -350,6 +350,13 @@
       img {
         object-fit: cover;
       }
+    }
+    .row {
+      justify-content: start;
+    }
+    .skill .info {
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 }
@@ -601,7 +608,6 @@
   color: white;
   .container {
     padding: var(--sectionPadding);
-    padding-left: 0;
 
     h2 {
       color: #fff;
