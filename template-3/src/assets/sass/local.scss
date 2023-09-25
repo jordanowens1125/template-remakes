@@ -3,6 +3,7 @@
 // project
 .project {
   padding: 0;
+  text-align: left;
   .img-container {
     position: absolute;
     top: 0;
@@ -269,6 +270,7 @@
 
 // accordion
 .accordion-section {
+  text-align: left;
   .section-heading {
     color: var(--primary);
   }
@@ -366,12 +368,13 @@
 // our-team
 .our-team {
   background-color: var(--primary);
-  .container{
+  text-align: left;
+  .container {
     display: flex;
     flex-direction: column;
     gap: var(--p-sm);
   }
-  .section-heading{
+  .section-heading {
     color: var(--primary-bg-color);
   }
   .item-heading {
@@ -400,10 +403,10 @@
         color: var(--primary);
         border: 1px solid var(--borderColor);
         padding: var(--p-s);
-        transition: .4s ease-in-out;
+        transition: 0.4s ease-in-out;
         cursor: pointer;
       }
-      i:hover{
+      i:hover {
         color: var(--primary-bg-color);
         background-color: var(--primary);
       }
