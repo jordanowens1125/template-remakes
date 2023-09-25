@@ -128,13 +128,20 @@
       font-size: 1.5rem;
     }
   }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-sm);
+  }
+  .content-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-sm);
+  }
 
   @media screen and (min-width: 765px) {
     section {
       padding: var(--sectionPadding);
-    }
-    section .heading {
-      max-width: 60%;
     }
   }
 
@@ -214,6 +221,7 @@
   .img-container {
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
   .overlay {
     height: 100%;

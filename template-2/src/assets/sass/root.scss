@@ -40,7 +40,7 @@
     /* padding */
     --p-xs: 4px;
     --p-s: 8px;
-    --p-sm: 12px;
+    --p-sm: 16px;
     --p-md: 24px;
     --p-ml: 32px;
     --p-lg: 40px;
@@ -223,7 +223,7 @@
   }
   .img-container {
     width: 100%;
-    height: 100%;
+    height: 100%;overflow: hidden;
   }
   /*  */
 
