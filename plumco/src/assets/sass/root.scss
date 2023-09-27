@@ -17,7 +17,7 @@
     --bodyTextColorWhite: #fafbfc;
     --bodyTextColor: #3a3a3a;
     --black: #101114;
-    --borderColor: #dadada;
+    --borderColor: #f5f8fe;
 
     /* background colors */
     --primary-bg-color: rgb(245, 247, 250);
@@ -187,13 +187,29 @@
   /* img */
   .img-container {
     height: 100%;
-    width: 100%;
+    width: 100%;position: relative;
   }
   img {
     border-radius: var(--b-radius);
     object-fit: contain;
     height: 100%;
     width: 100%;
+  }
+  .overlay {
+    z-index: 2;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    gap: var(--p-md);
+    transition: 0.4s;
+    transform-origin: center;
+    border-radius: inherit;
   }
   /*  */
 
