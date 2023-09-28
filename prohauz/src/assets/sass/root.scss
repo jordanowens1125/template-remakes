@@ -52,6 +52,8 @@
     --black: #101114;
     --borderColor: #eff1fd;
     --borderColor-rgb: 218, 218, 218;
+
+    --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   }
 
   body {
@@ -197,6 +199,7 @@
   .img-container {
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
   /*  */
 
@@ -262,7 +265,9 @@
     position: relative;
     z-index: 1;
     background-color: var(--primary);
-
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
     // Transition Properties
     color: #000;
     transition: color 0.3s;

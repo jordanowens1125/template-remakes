@@ -13,6 +13,9 @@
   display: none;
   align-items: center;
   justify-content: center;
+  -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
 
   svg {
     fill: var(--bodyTextColorWhite);

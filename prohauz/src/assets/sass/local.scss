@@ -449,6 +449,7 @@
 .reviews-section {
   padding-top: var(--p-md);
   text-align: center;
+
   .slider {
     display: flex;
     overflow: hidden;
@@ -545,6 +546,7 @@
     text-align: center;
     /* make each child the same width as the parent */
     flex: 0 0 100%;
+    border-radius: var(--b-radius);
   }
   span {
     font-weight: 700;
