@@ -131,6 +131,7 @@
       width: calc(20 / 16 * 1rem);
       height: calc(20 / 16 * 1rem);
       pointer-events: none;
+      filter: brightness(1);
     }
 
     .cs-moon {
