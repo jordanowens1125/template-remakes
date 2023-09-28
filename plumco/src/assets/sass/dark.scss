@@ -53,6 +53,11 @@
     .dark {
       display: block !important;
     }
+
+    .cs-solid-button{
+      color: var(--primary-bg-color);
+    }
+
     .cs-button-solid::before {
       background-color: var(--primary);
       filter: saturate(0.75);
