@@ -6,39 +6,62 @@
 
 /* Mobile */
 @media only screen and (min-width: 0em) {
-	// Dark Mode Color Scheme
-	:root {
-		--dark: #082032;
-		--medium: #2c394b;
-		--accent: #334756;
-	}
+  // Dark Mode Color Scheme
+  :root {
+    --dark: #082032;
+    --medium: #2c394b;
+    --accent: #334756;
+  }
 
-	body.dark-mode {
-		background-color: var(--dark);
+  body.dark-mode {
+    --primary-bg-color: #05070a;
+    --primary: #4a8dfa;
+    --borderColor: #000000;
+    --bodyTextColor: #d6d6d6;
+    --light-bg: #101214;
+    --borderColor: #101214;
+    --box-shadow: 3px 13px 26px -9px #000;
+    background-color: var(--primary-bg-color);
 
-		p,
-		li,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			color: #fff;
-		}
+    #cs-navigation {
+      box-shadow: var(--box-shadow);
+      .cs-line {
+        background-color: var(--white);
+      }
+    }
 
-		// hide all light classes
-		.light {
-			display: none;
-		}
+    section:nth-child(even) {
+      background-color: var(--light-bg);
+    }
 
-		// show all dark classes
-		.dark {
-			display: block !important;
-		}
-		
-	}
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #fff;
+    }
 
+    // hide all light classes
+    .light {
+      display: none;
+    }
+
+    // show all dark classes
+    .dark {
+      display: block !important;
+    }
+    .cs-button-solid::before {
+      background-color: var(--primary);
+      filter: saturate(0.75);
+    }
+
+    img {
+      filter: brightness(0.8);
+    }
+  }
 }
 
 /*-- -------------------------- -->
@@ -47,75 +70,98 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-	body.dark-mode {
-		#dark-mode-toggle {
-			.cs-sun {
-				transform: translate(-50%, -50%);
-				opacity: 1;
-			}
+  body.dark-mode {
+    #footer {
+      background: var(--primary-bg-color);
+      border-top: 2px solid var(--borderColor);
+    }
+    #cs-navigation {
+      background-color: var(--primary-bg-color);
 
-			.cs-moon {
-				transform: translate(-50%, -150%);
-				opacity: 0;
-				fill: #fff;
-			}
-		}
-	}
+      .cs-logo {
+        /* makes it turn white */
+        filter: grayscale(1) brightness(1000%);
+      }
 
-	#dark-mode-toggle {
-		display: block;
-		position: absolute;
-		top: calc(10 / 16 * 1rem);
-		right: calc(70 / 16 * 1rem);
-		width: calc(48 / 16 * 1rem);
-		height: calc(48 / 16 * 1rem);
-		background: transparent;
-		border: none;
-		overflow: hidden;
-		padding: 0;
-		z-index: 1000;
+      .cs-li-link {
+        color: var(--bodyTextColorWhite);
+      }
 
-		img,
-		svg {
-			//center image inside button
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: calc(20 / 16 * 1rem);
-			height: calc(20 / 16 * 1rem);
-			pointer-events: none;
-		}
+      .cs-li-link {
+        &:before {
+          background-color: var(--primary);
+        }
+      }
+    }
 
-		.cs-moon {
-			z-index: 2;
-			// Transition properties
-			transition: transform 0.3s, opacity 0.3s;
+    #dark-mode-toggle {
+      .cs-sun {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
 
-			// fill: yellow; --> uncomment to change the color of the moon if needed
-		}
+      .cs-moon {
+        transform: translate(-50%, -150%);
+        opacity: 0;
+        fill: #fff;
+      }
+    }
+  }
 
-		.cs-sun {
-			z-index: 1;
-			// Transition property
-			transform: translate(-50%, 100%);
-			opacity: 0;
-			transition: transform 0.3s, opacity 0.3s;
-		}
-	}
+  #dark-mode-toggle {
+    display: block;
+    position: absolute;
+    top: calc(10 / 16 * 1rem);
+    right: calc(70 / 16 * 1rem);
+    width: calc(48 / 16 * 1rem);
+    height: calc(48 / 16 * 1rem);
+    background: var(--light-bg);
+    border: none;
+    overflow: hidden;
+    padding: 0;
+    z-index: 1000;
+
+    img,
+    svg {
+      //center image inside button
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(20 / 16 * 1rem);
+      height: calc(20 / 16 * 1rem);
+      pointer-events: none;
+    }
+
+    .cs-moon {
+      z-index: 2;
+      // Transition properties
+      transition: transform 0.3s, opacity 0.3s;
+
+      // fill: yellow; --> uncomment to change the color of the moon if needed
+    }
+
+    .cs-sun {
+      z-index: 1;
+      // Transition property
+      transform: translate(-50%, 100%);
+      opacity: 0;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+  }
 }
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-	#dark-mode-toggle {
-		position: relative;
-		transform: none;
-		top: auto;
-		right: auto;
-		margin: 0;
+  #dark-mode-toggle {
+    position: relative;
+    transform: none;
+    top: auto;
+    right: auto;
+    margin: 0;
 
-		&:hover {
-			cursor: pointer;
-		}
-	}
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

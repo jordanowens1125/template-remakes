@@ -10,20 +10,20 @@
   :root {
     --primary-rgb: 42, 197, 179;
     --primary: #0052da;
-    --primaryLight: rgb(16, 133, 119);
+    --primaryLight: #9ac0fe;
     --secondary: #f4b81c;
     --secondaryLight: #001f3f;
-    --headerColor: #131111;
+    --headerColor: #222121;
     --bodyTextColorWhite: #fafbfc;
-    --bodyTextColor: #3a3a3a;
+    --bodyTextColor: #2c2d30;
     --black: #101114;
-    --borderColor: #f5f8fe;
+    --borderColor: #edeff2;
 
     /* background colors */
-    --primary-bg-color: rgb(245, 247, 250);
+    --primary-bg-color: #f5f7fa;
     --copyright-bg-color: yellow;
     --banner-bg-color: purple;
-    --light-bg: rgb(219, 255, 250);
+    --light-bg: rgb(250, 250, 255);
 
     --white: #fefeff;
 
@@ -44,10 +44,12 @@
     --p-xl: 4rem;
 
     /* border radius */
-    --b-radius: 4px;
+    --b-radius: 8px;
 
     // max-width
     --maxContainerWidth: 80rem;
+
+    --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   }
 
   body {
@@ -78,18 +80,26 @@
   section:nth-child(even) {
     background-color: var(--white);
   }
-  section .sub,
   section .heading {
     margin: auto;
     margin-bottom: var(--p-md);
     text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
   }
-  // .sub {
-  //   max-width: 60%;
-  // }
+  .sub {
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7rem;
+    margin-bottom: 3rem;
+  }
+
   @media screen and (min-width: 765px) {
     section {
       padding: var(--sectionPadding);
+      .sub {
+        max-width: 60%;
+      }
     }
   }
 
@@ -99,6 +109,8 @@
     align-items: center;
     justify-content: center;
     gap: var(--p-md);
+    width: 100%;
+    height: 100%;
   }
   .item {
     display: flex;
@@ -140,6 +152,7 @@
     background-color: transparent;
     border-radius: var(--b-radius);
     padding: 12px 18px;
+    box-shadow: var(--box-shadow);
   }
 
   a:hover,
@@ -175,6 +188,9 @@
     padding: var(--p-sm);
     border-radius: var(--b-radius);
     border: 1px solid var(--borderColor);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
   }
 
   input:focus,
@@ -187,13 +203,16 @@
   /* img */
   .img-container {
     height: 100%;
-    width: 100%;position: relative;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--b-radius);
   }
   img {
-    border-radius: var(--b-radius);
     object-fit: contain;
     height: 100%;
     width: 100%;
+    border-radius: inherit;
   }
   .overlay {
     z-index: 2;
@@ -272,13 +291,13 @@
   // Button - can be replaced using CodeStitch's "Button" Stitches
   .cs-button-solid {
     font-size: calc(16 / 16 * 1rem);
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-decoration: none;
     display: inline-block;
-    line-height: calc(50 / 16 * 1em);
-    height: calc(50 / 16 * 1rem);
+    // line-height: calc(50 / 16 * 1em);
+    // height: calc(50 / 16 * 1rem);
     text-align: center;
-    padding: 0 calc(30 / 16 * 1rem);
+    padding: calc(12 / 16 * 1rem) calc(18 / 16 * 1rem);
     position: relative;
     z-index: 1;
     background-color: var(--primary);
@@ -287,7 +306,10 @@
     color: var(--white);
     transition: color 0.3s;
     transition-delay: 0.1s;
-
+    overflow: hidden;
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
     &:hover {
       color: #fff;
       &:before {
@@ -1063,30 +1085,6 @@
   }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 64rem) {
-  body.dark-mode {
-    #cs-navigation {
-      background-color: var(--dark);
-
-      .cs-logo {
-        /* makes it turn white */
-        filter: grayscale(1) brightness(1000%);
-      }
-
-      .cs-li-link {
-        color: var(--bodyTextColorWhite);
-      }
-
-      .cs-li-link {
-        &:before {
-          background-color: var(--primaryLight);
-        }
-      }
-    }
-  }
-}
-
 /*-- -------------------------- -->
 <---   Interior Page Header     -->
 <--- -------------------------- -*/
@@ -1556,15 +1554,6 @@
       .copyright {
         display: inline-block;
       }
-    }
-  }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode {
-    #footer {
-      background: #061623;
     }
   }
 }
