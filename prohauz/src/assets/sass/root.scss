@@ -9,7 +9,7 @@
   // Website colors
   :root {
     --primary-rgb: 42, 197, 179;
-    --primary: hwb(173 16% 22%);
+    --primary: #29c7b4;
     --primaryLight: rgb(16, 133, 119);
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
@@ -32,14 +32,15 @@
     --bodyFontSize: 1rem;
 
     /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(2.5rem, 7.82vw, 6.25rem) 1rem;
+    --sectionPadding: clamp(3.5rem, 7.82vw, 6.25rem) 1rem;
 
     /* padding */
-    --p-xs: 4px;
-    --p-s: 8px;
-    --p-sm: 12px;
-    --p-md: 24px;
-    --p-lg: 40px;
+    --p-xs: 0.25rem;
+    --p-s: 0.5rem;
+    --p-sm: 0.75rem;
+    --p-md: 1.5rem;
+    --p-lg: 2.5rem;
+    --p-xl: 4rem;
 
     /* border radius */
     --b-radius: 8px;
@@ -92,6 +93,10 @@
     text-align: center;
   }
 
+  section:nth-child(even) {
+    background-color: var(--light-bg);
+  }
+
   @media screen and (min-width: 768px) {
     section {
       text-align: unset;
@@ -102,6 +107,8 @@
     display: flex;
     flex-direction: column;
     gap: var(--p-md);
+    width: 100%;
+    height: 100%;
   }
 
   .item {
@@ -112,6 +119,8 @@
   }
 
   .content {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: var(--p-md);
@@ -270,9 +279,10 @@
     box-shadow: var(--box-shadow);
     // Transition Properties
     color: #000;
-    transition: color 0.3s;
+    transition: 0.3s;
     transition-delay: 0.1s;
-
+    border-radius: var(--b-radius);
+    overflow: hidden;
     &:hover {
       color: #fff;
       &:before {
@@ -295,6 +305,9 @@
       width: 0;
       transition: width 0.3s;
     }
+  }
+  .cs-button-solid:hover {
+    background-color: #000;
   }
 }
 

@@ -15,11 +15,13 @@
     --medium: #2c394b;
     --accent: #334756;
     --bodyTextColor: #dadce0;
-    --light-bg: #36445e;
-
-    --primary-bg-color: #2f3b52;
+    --light-bg: #0d0d11;
+    --borderColor: #0d0d11;
+    --primary-bg-color: #070709;
     --secondary: rgb(152, 245, 234);
+    --bodyTextColor: #eae9fc;
 
+    color: var(--bodyTextColor);
     h1,
     h2,
     h3,
