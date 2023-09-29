@@ -43,19 +43,21 @@ eleventyNavigation:
         Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius.
         Nibh tortor id aliquet lectus proin nibh condimentum.
       </p>
-      <a href="/about" class="cs-button-solid">Explore More</a>
-      <a href="/contact" class="cs-button-transparent">
-        <img
-          class="cs-img"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-          alt="play icon"
-          width="17"
-          height="17"
-        />
-        Get in Touch
-      </a>
+      <div class="group">
+        <a href="/about" class="cs-button-solid">Explore More</a>
+        <a href="/contact" class="cs-button-transparent">
+          <img
+            class="cs-img"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
+            alt="play icon"
+            width="17"
+            height="17"
+          />
+          Get in Touch
+        </a>
+      </div>
     </div>
   </div>
 
@@ -575,4 +577,4 @@ eleventyNavigation:
   </div>
 </section>
 
- {% include 'components/cta.html' %} {% endblock %}
+{% include 'components/cta.html' %} {% endblock %}

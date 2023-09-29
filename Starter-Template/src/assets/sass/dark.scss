@@ -15,7 +15,8 @@
 
   body.dark-mode {
     background-color: var(--dark);
-	// dark mode variables
+    --light-bg: gray;
+    // dark mode variables
     p,
     li,
     h1,
@@ -39,7 +40,8 @@
 
     #cs-navigation {
       background-color: var(--dark);
-
+      box-shadow: var(--box-shadow);
+      border-bottom: 2px solid black;
       .cs-logo {
         /* makes it white */
         filter: grayscale(1) brightness(1000%);
@@ -48,7 +50,6 @@
       .cs-line {
         background-color: #fff;
       }
-
 
       .cs-li-link {
         color: var(--bodyTextColorWhite);
@@ -78,12 +79,12 @@
       }
     }
 
-	#cta {
+    #cta {
       &:after {
         display: none;
       }
     }
-	#footer {
+    #footer {
       background: #061623;
     }
   }
