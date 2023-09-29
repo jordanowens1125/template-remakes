@@ -134,6 +134,10 @@
   #hero {
     .top {
       min-height: 98vh;
+      .group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
     .top i {
       display: block;
