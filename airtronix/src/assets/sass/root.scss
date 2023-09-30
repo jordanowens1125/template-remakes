@@ -8,12 +8,14 @@
 @media only screen and (min-width: 0em) {
   // Website colors
   :root {
+    --primary-rgb: 217, 4, 41;
     --primary: #d90429;
     --primaryLight: #eb1539;
     --primaryDark: #aa041f;
     --secondary: #001f3f;
-    --secondaryLight: #084583;
-    --headerColor: #1a1a1a;
+    --secondaryLight: rgb(8, 69, 131);
+    --secondaryLight-rgb: 8, 69, 131;
+    --headerColor: #090d30;
     --bodyTextColor: #3f3f3f;
     --bodyTextColorWhite: #fafbfc;
 
@@ -73,6 +75,7 @@
       margin-bottom: var(--p-md);
       font-size: clamp(1.75rem, 2.5vw, 4rem);
       font-weight: bold;
+      color: var(--dark-bg);
     }
     .sub-h {
       margin-bottom: 1.5rem;

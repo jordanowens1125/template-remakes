@@ -458,16 +458,13 @@ section:nth-child(odd) {
 .testimonials {
   // background-color: var(--light-bg);
   // color: #3f3f3f;
-  .heading {
-    color: var(--primary-bg-color);
-  }
   .item {
     padding: var(--p-lg);
     border: var(--borderColor) 1px solid;
     border-radius: var(--b-radius);
     align-items: flex-start;
     height: fit-content;
-
+    box-shadow: var(--box-shadow);
     i {
       color: var(--primary);
       font-size: clamp(1.5rem, 2vw, 2.4rem);
@@ -539,9 +536,11 @@ section:nth-child(odd) {
 }
 
 @media screen and (min-width: 1000px) {
-  .group {
-    display: grid;
-    grid-template-columns: 1.75fr 1fr;
+  .testimonials {
+    .group {
+      display: grid;
+      grid-template-columns: 1.75fr 1fr;
+    }
   }
 }
 
