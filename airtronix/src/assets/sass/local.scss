@@ -223,6 +223,10 @@
   }
   .cs-button-solid {
     margin-top: var(--p-lg);
+    background-color: var(--white);
+  }
+  .cs-button-solid::before{
+    background-color: var(--primary);
   }
 }
 
@@ -468,11 +472,14 @@
     background-color: var(--primary-bg-color);
     color: var(--white);
     border-radius: var(--b-radius);
-
+    height: fit-content;
     .heading,
     h2,
     p {
       margin: auto;
+    }
+    textarea{
+      flex: 1;
     }
   }
 }
@@ -494,8 +501,8 @@
 }
 
 .info {
-  background-color: var(--primaryLight) !important;
-  color: var(--white);
+  background-color: var(--primary-bg-color) !important;
+  color: var(--white) !important;
   a {
     p {
       font-size: clamp(1.25rem, 1.25vw, 2rem);
