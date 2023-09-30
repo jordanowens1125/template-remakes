@@ -4,8 +4,108 @@
 <---           Hero             -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #hero {
+#hero {
+  min-height: 90vh;
+  background-color: var(--primary-bg-color);
+  padding-top: 0;
+  .container {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.top {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px red solid;
+  background-image: url("http://fastwpdemo.com/newwp/airtronix/wp-content/uploads/2023/03/breadcrumb-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // .img-container {
+  //   position: absolute;
+  //   img {
+  //     object-fit: cover;
+  //     transform-origin: center;
+  //   }
+  // }
+}
+
+.top i {
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  display: none;
+}
+
+.top .container {
+  width: 50%;
+}
+
+.bottom {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: var(--dark-bg);
+  background-color: var(--light-bg);
+  width: fit-content;
+  min-width: 75%;
+  margin: auto;
+  .sub-h {
+    color: inherit;
+    font-size: clampp(1.2rem, 3vw, 2.3rem);
+  }
+  .sub-h::before {
+    content: none;
+  }
+  .heading {
+    color: inherit !important;
+  }
+  a {
+    font-size: clamp(1.4rem, 3.5vw, 2.45rem);
+    text-decoration: underline;
+    color: var(--primary);
+    transition: 0.3s;
+  }
+  a:hover {
+    color: var(--primaryLight);
+  }
+  .container {
+    flex: 1;
+    // padding: var(--p-lg) var(--p-md);
+  }
+  i {
+    font-size: clamp(1.3rem, 3.5vw, 2.4rem);
+  }
+  .item {
+    height: 100%;
+    width: 100%;
+    padding: var(--p-md);
+    background-color: var(--light-bg);
+  }
+  .group {
+    background-color: var(--dark-bg);
+    gap: 1px;
+    border: 1px var(--dark-bg) solid;
+  }
+  .content-group {
+    padding: var(--p-md);
+    background-color: var(--borderColor);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .bottom {
+    .group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

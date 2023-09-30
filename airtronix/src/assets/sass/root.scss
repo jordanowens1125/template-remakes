@@ -9,12 +9,12 @@
   // Website colors
   :root {
     --primary: #d90429;
-    --primaryLight: #ffd675;
+    --primaryLight: #eb1539;
     --primaryDark: #aa041f;
     --secondary: #001f3f;
     --secondaryLight: #084583;
     --headerColor: #1a1a1a;
-    --bodyTextColor: #e5ecea;
+    --bodyTextColor: #3f3f3f;
     --bodyTextColorWhite: #fafbfc;
 
     --tertiary: #00b1e6;
@@ -39,10 +39,12 @@
     --p-xl: 4rem;
 
     /* background colors */
-    --primary-bg-color: #090d30;
+    --primary-bg-color: #ecf0f7;
     --light-bg: #ecf0f7;
+    --dark-bg: #090d30;
+    --footer-bg: var(--dark-bg);
     // --lighter-bg:#eeeeeeec ;
-    --borderColor: rgba(252, 252, 252, 0.308);
+    --borderColor: #c8d4dc;
 
     --white: #fefeff;
     --black: #000;
@@ -70,6 +72,7 @@
     .heading {
       margin-bottom: var(--p-md);
       font-size: clamp(1.75rem, 2.5vw, 4rem);
+      font-weight: bold;
     }
     .sub-h {
       margin-bottom: 1.5rem;
@@ -79,6 +82,7 @@
       align-items: center;
       text-transform: uppercase;
       font-size: clamp(1rem, 1.2vw, 2.5rem);
+      font-weight: bold;
     }
     .sub-h::before {
       content: "";
@@ -86,6 +90,9 @@
       background-color: var(--primary);
       width: 1.5rem;
       height: 0.175rem;
+    }
+    .item-h {
+      font-weight: 600;
     }
   }
 
@@ -278,7 +285,7 @@
       top: 0;
       left: 0;
       z-index: -1;
-      background-color: #000;
+      background-color: var(--primaryDark);
 
       //Transition properties
       width: 0;
@@ -392,6 +399,10 @@
   }
 }
 
+#cs-navigation {
+  background-color: var(--primary-bg-color);
+}
+
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
@@ -411,11 +422,10 @@
     padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: #fff;
+
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
-
     &:before {
       /* black blurred overlay */
       content: "";
@@ -876,7 +886,6 @@
     padding: 0 calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
@@ -1197,7 +1206,7 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #footer {
-    background: #1c1c1c;
+    background: var(--footer-bg);
     padding: calc(84 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
     font-size: min(4vw, 1.2em);
 
