@@ -2,27 +2,34 @@
   <div class="container">
     <div class="group">
       <div class="item">
-        <i class="fa-solid fa-location-dot"></i>
-        <a href="tel:+"
-          ><p class="label">{{client.address.lineOne}}</p>
-          <p class="details">{{client.address.lineTwo}}</p></a
+        <a
+        target="_blank"
+          rel="noopener noreferrer"
+          href="{{client.address.mapLink}}"
+          
+          ><i class="fa-solid fa-location-dot"></i>
+          <p class="label"></p>
+          <p class="details">
+            {{client.address.lineOne}}, {{client.address.lineTwo}}
+            {{client.address.city}}, {{client.address.state}}
+            {{client.address.zip}}
+          </p></a
         >
       </div>
       <div class="item">
-        <i class="fa-solid fa-location-dot"></i>
-        <a href="tel:+"
-          ><p class="label">{{client.address.lineOne}}</p>
-          <p class="details">{{client.address.lineTwo}}</p></a
+        <a href="mailto: {{client.email}}"
+          ><i class="fa-solid fa-envelope"></i>
+          <p class="label">Email:</p>
+          <p class="details">{{client.email}}</p></a
         >
       </div>
       <div class="item">
-        <i class="fa-solid fa-location-dot"></i>
-        <a href="tel:+"
-          ><p class="label">{{client.address.lineOne}}</p>
-          <p class="details">{{client.address.lineTwo}}</p></a
+        <a href="tel:{{client.phoneForTel}}"
+          ><i class="fa-solid fa-phone-flip"></i>
+          <p class="label">Call Us:</p>
+          <p class="details">{{client.phoneFormatted}}</p></a
         >
       </div>
-
     </div>
   </div>
 </section>

@@ -10,6 +10,7 @@
   :root {
     --primary: #d90429;
     --primaryLight: #ffd675;
+    --primaryDark: #aa041f;
     --secondary: #001f3f;
     --secondaryLight: #084583;
     --headerColor: #1a1a1a;
@@ -40,7 +41,7 @@
     /* background colors */
     --primary-bg-color: #090d30;
     --light-bg: #ecf0f7;
-
+    // --lighter-bg:#eeeeeeec ;
     --borderColor: rgba(252, 252, 252, 0.308);
 
     --white: #fefeff;
@@ -54,13 +55,13 @@
     color: var(--bodyTextColor);
   }
 
-  section:nth-child(even) {
-    background-color: var(--light-bg);
-    color: #3f3f3f;
-    .heading {
-      color: var(--primary-bg-color);
-    }
-  }
+  // section:nth-child(even) {
+  //   background-color: var(--light-bg);
+  //   color: #3f3f3f;
+  //   .heading {
+  //     color: var(--primary-bg-color);
+  //   }
+  // }
 
   section {
     padding: var(--sectionPadding);
@@ -257,7 +258,7 @@
     border: none;
     border-radius: var(--b-radius);
     // Transition Properties
-    color: #000;
+    color: var(--white);
     transition: color 0.3s;
     transition-delay: 0.1s;
     overflow: hidden;
