@@ -6,6 +6,9 @@ section:nth-child(odd) {
   .heading {
     color: var(--primary-bg-color);
   }
+  .sub-h, .sub-h::before{
+    color: var(--primaryLight);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -519,6 +522,9 @@ section:nth-child(odd) {
     }
     .cs-button-solid::before {
       background-color: var(--primaryDark);
+    }
+    input,textarea,select,option{
+      background-color: var(--light-bg);
     }
   }
 }
