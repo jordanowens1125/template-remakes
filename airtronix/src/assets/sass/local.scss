@@ -462,7 +462,7 @@ section:nth-child(odd) {
   // background-color: var(--light-bg);
   // color: #3f3f3f;
   .item {
-    padding: var(--p-lg);
+    padding: var(--p-md);
     border: var(--borderColor) 1px solid;
     border-radius: var(--b-radius);
     align-items: flex-start;
@@ -507,7 +507,7 @@ section:nth-child(odd) {
     display: flex;
     flex-direction: column;
     gap: var(--p-md);
-    padding: var(--p-md);
+    padding: var(--p-lg);
     background-color: var(--dark-bg);
     color: var(--white);
     border-radius: var(--b-radius);
@@ -556,7 +556,7 @@ section:nth-child(odd) {
   a {
     transition: 0.4s;
     p {
-      font-size: clamp(1.25rem, 1.25vw, 2rem);
+      font-size: clamp(1rem, 1.25vw, 2rem);
     }
   }
   i {
