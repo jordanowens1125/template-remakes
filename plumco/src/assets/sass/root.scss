@@ -73,6 +73,7 @@
     flex-direction: column;
     align-items: center;
     gap: var(--p-md);
+    position: relative;
   }
 
   section:nth-child(even) {
