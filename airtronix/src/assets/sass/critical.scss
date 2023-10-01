@@ -9,7 +9,15 @@
 
   height: var(--hero-height);
   padding-bottom: 0;
-  background-color: var(--primary-bg-color);
+  // background-color: var(--primary-bg-color);
+  background-image: linear-gradient(
+    to right top,
+    #002f60,
+    #0d4481,
+    #1a5ba3,
+    #2572c6,
+    #2e8beb
+  );
   color: var(--white);
   display: flex;
   justify-content: center;
