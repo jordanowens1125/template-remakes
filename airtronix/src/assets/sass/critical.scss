@@ -28,7 +28,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(var(--secondaryLight-rgb), 0.6);
+    background-image: linear-gradient(
+      to right top,
+      #002f60,
+      #0d4481,
+      #1a5ba3,
+      #2572c6,
+      #2e8beb
+    );
     z-index: 10;
   }
   .container {
