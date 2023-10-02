@@ -571,7 +571,7 @@
     .cs-ul-wrapper {
       height: 100vh;
       opacity: 0;
-      background-color: #fff;
+      background-color: var(--primary-bg-color);
       box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
       overflow: hidden;
       position: absolute;
