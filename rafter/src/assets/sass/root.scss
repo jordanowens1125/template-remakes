@@ -81,12 +81,23 @@
     height: 100%;
     gap: var(--p-md);
   }
-
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: var(--p-md);
+  }
+  .content-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: var(--p-sm);
+  }
   .item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: var(--p-sm);
   }
 
