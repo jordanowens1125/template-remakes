@@ -14,10 +14,11 @@
     --secondaryLight: #001f3f;
     --headerColor: #001a40;
     --tertiary: #00b4c3;
+    --tertiaryDark: #0394a1;
 
     --bodyTextColor: #001a40b0;
     --bodyTextColorWhite: #fafbfc;
-
+    --bodyTextColorLight: #001a4070;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -25,7 +26,7 @@
     --bodyFontSize: 1rem;
 
     /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1.5rem;
 
     --maxContainerWidth: 90rem;
 
@@ -63,8 +64,16 @@
     text-align: center;
     .heading {
       margin-bottom: var(--p-lg);
-      font-size: clamp(1.75rem, 2.5vw, 4rem);
+      font-size: clamp(1.75rem, 2.5vw, 3.5rem);
       color: var(--headerColor);
+    }
+    .heading-2{
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: var(--p-lg);
     }
     .sub-h {
       margin-bottom: var(--p-lg);
@@ -116,10 +125,15 @@
     color: var(--headerColor);
     // line-height: 1.4rem;
     // letter-spacing: 0.1px;
-    font-size: clamp(1.2rem, 3vw, 2.5rem);
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
     font-weight: 500;
     margin: var(--p-sm) 0;
+    transition: 0.4s;
   }
+
+  // .item-h:hover {
+  //   color: var(--primary);
+  // }
 
   /* img */
   .img-container {
@@ -160,7 +174,9 @@
 
   a {
     text-decoration: none;
-    color: inherit;
+    color: var(--tertiary);
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
   }
 
   /* Text color */
@@ -225,8 +241,8 @@
 
   // Button - can be replaced using CodeStitch's "Button" Stitches
   .cs-button-solid {
-    font-size: calc(16 / 16 * 1rem);
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -234,7 +250,7 @@
     // line-height: calc(50 / 16 * 1em);
     // height: calc(50 / 16 * 1rem);
     text-align: center;
-    padding: .8rem calc(20 / 16 * 1rem);
+    padding: 0.8rem calc(20 / 16 * 1rem);
     position: relative;
     z-index: 1;
     background-color: var(--primary);
@@ -323,7 +339,6 @@
   li,
   a {
     font-size: calc(18 / 16 * 1rem);
-    line-height: 27/18em;
     margin: 0;
   }
 
@@ -384,8 +399,7 @@
     width: 100%;
     padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
-    box-sizing: border-box;
-    background-color: #fff;
+    background-color: var(--primary-bg-color);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
@@ -850,11 +864,10 @@
     padding: 0 calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
-
+    background-color: inherit;
     .cs-container {
       width: 100%;
       max-width: calc(1280 / 16 * 1rem);
