@@ -8,6 +8,13 @@
   margin-top: var(--p-lg);
   display: flex;
   min-height: 65vh;
+  .bg-container {
+    position: absolute;
+    inset: 0;
+    img{
+      object-fit: cover;
+    }
+  }
   .container {
     text-align: center;
     display: flex;

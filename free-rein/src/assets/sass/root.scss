@@ -80,8 +80,11 @@
     .sub-h {
       margin: auto;
       margin-bottom: var(--p-lg);
-      width: 80%;
+      width: 85%;
       // color: var(--headerColor);
+    }
+    .banner-h {
+      color: var(--headerColor);
     }
   }
 
@@ -140,7 +143,8 @@
   // }
 
   /* img */
-  .img-container {
+  .img-container,
+  .bg-container {
     height: 100%;
     width: 100%;
     position: relative;

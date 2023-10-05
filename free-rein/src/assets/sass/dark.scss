@@ -14,20 +14,26 @@
   }
 
   body.dark-mode {
-    background-color: var(--dark);
+    --primary-bg-color: #020d1f;
+    --footer-bg-color: var(var(--primary-bg-color))
     --light-bg: gray;
-    --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 10px;;
+    --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 10px;
+
+    --headerColor: #fff;
+    --bodyTextColor: #dededf;
+    --bodyTextColorLight: #9dc3f8;
+
     // dark mode variables
-    p,
-    li,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: #fff;
-    }
+    // p,
+    // li,
+    // h1,
+    // h2,
+    // h3,
+    // h4,
+    // h5,
+    // h6 {
+    //   color: #fff;
+    // }
 
     // hide all light classes
     .light {
@@ -40,7 +46,7 @@
     }
 
     #cs-navigation {
-      background-color: var(--dark);
+      // background-color: var(--dark);
       box-shadow: var(--box-shadow);
       border-bottom: 2px solid black;
       .cs-logo {
@@ -86,7 +92,8 @@
       }
     }
     #footer {
-      background: #061623;
+      background: var(--footer-bg-color);
+      border-top: 2px solid var(--primary);
     }
   }
 }

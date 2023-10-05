@@ -1,6 +1,9 @@
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 
 .about-us {
+  .group {
+    gap: var(--p-lg);
+  }
   .item {
     flex-direction: row;
     text-align: left;
@@ -89,6 +92,15 @@
     -webkit-box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
+    position: relative;
+  }
+  .bg-container {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    img {
+      object-fit: cover;
+    }
   }
   .content {
     padding: var(--p-xl) var(--p-lg);
@@ -152,7 +164,7 @@
   }
   .img-container {
     border-radius: 50%;
-    width: 25%;
+    width: 20%;
   }
   img {
     object-fit: cover;
@@ -244,6 +256,7 @@
   }
   .img-container {
     cursor: pointer;
+    transition: 0.3s;
   }
   .img-container:hover {
     opacity: 0.7;
@@ -288,7 +301,8 @@
   }
   .item-sub {
     color: var(--bodyTextColorLight);
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    text-transform: uppercase;
   }
   .item-info {
     display: flex;
