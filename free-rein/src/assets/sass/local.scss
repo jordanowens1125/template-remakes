@@ -12,6 +12,8 @@
   }
   .item-h {
     margin: 0;
+    font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+    font-weight: 600;
   }
 }
 
@@ -20,6 +22,19 @@
     .group {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: var(--p-lg);
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .about-us {
+    .group {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .item {
+      flex-direction: column;
     }
   }
 }
@@ -89,6 +104,32 @@
   .banner-h {
     font-size: clamp(1.8rem, 3.5vw, 2.4rem);
     font-weight: 600;
+  }
+}
+
+// body.dark-mode{
+//   .cta{
+//     .container
+//   }
+// }
+
+@media screen and (min-width: 1200px) {
+  .cta {
+    .content {
+      display: grid;
+      grid-template-areas:
+        "primary button"
+        "text button";
+      text-align: left;
+      justify-content: space-between;
+    }
+    button {
+      grid-area: button;
+    }
+    .primary,
+    .banner-h {
+      margin-left: 0;
+    }
   }
 }
 
@@ -256,6 +297,11 @@
   }
   .item-h:hover {
     color: var(--primary);
+  }
+  a {
+    display: flex;
+    align-items: center;
+    gap: var(--p-md);
   }
 }
 
