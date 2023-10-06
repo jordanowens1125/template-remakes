@@ -229,11 +229,6 @@
     gap: var(--p-md);
     transition: 0.3s;
     grid-column: 1 / -1;
-    padding-right: var(--p-s);
-  }
-  a:hover {
-    color: var(--tertiaryDark);
-    padding-right: 0;
   }
 }
 
@@ -326,12 +321,6 @@
     display: flex;
     align-items: center;
     gap: var(--p-md);
-    padding-right: var(--p-s);
-    transition: 0.3s;
-  }
-  a:hover {
-    color: var(--tertiaryDark);
-    padding-right: 0;
   }
 }
 

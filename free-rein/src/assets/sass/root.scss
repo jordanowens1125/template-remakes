@@ -137,7 +137,21 @@
     margin: var(--p-sm) 0;
     transition: 0.4s;
   }
-
+  .link,
+  .link-2 {
+    transition: 0.3s;
+  }
+  .link:hover {
+    padding-left: var(--p-s);
+    color: var(--tertiaryDark);
+  }
+  .link-2 {
+    padding-right: var(--p-s);
+  }
+  .link-2:hover {
+    padding-right: 0;
+    color: var(--tertiaryDark);
+  }
   // .item-h:hover {
   //   color: var(--primary);
   // }
