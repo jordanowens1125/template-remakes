@@ -56,16 +56,29 @@
   section {
     padding: var(--sectionPadding);
     position: relative;
-
-    .heading {
-      margin-bottom: var(--p-md);
-      font-size: clamp(1.75rem, 2.5vw, 4rem);
-    }
-    .sub-h {
-      margin-bottom: 1.5rem;
-    }
   }
 
+  .heading {
+    margin-bottom: var(--p-md);
+    font-size: clamp(1.75rem, 2.5vw, 4rem);
+  }
+  .heading-2{
+    
+  }
+  .sub-h {
+    margin-bottom: 1.5rem;
+  }
+  .banner-h{
+
+  }
+  .item-h-2 {
+  }
+  .item-sub{
+
+  }
+  .item-sub-2{
+
+  }
   .header-logo {
     font-size: clamp(1rem, 2vw, 3.25rem);
   }
@@ -97,6 +110,11 @@
     position: relative;
     overflow: hidden;
     border-radius: var(--b-radius);
+  }
+
+  .bg-container{
+    height: 100%;
+    width: 100%;
   }
   img,
   picture {
