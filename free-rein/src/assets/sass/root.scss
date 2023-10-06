@@ -289,7 +289,7 @@
     padding: 0.8rem calc(20 / 16 * 1rem);
     position: relative;
     z-index: 1;
-    background-color: var(--primary);
+    background: var(--primary);
     border-radius: 25px;
     border: none;
     // Transition Properties
@@ -313,7 +313,7 @@
       top: 0;
       left: 0;
       z-index: -1;
-      background-color: var(--tertiary);
+      background: var(--main-gradient);
 
       //Transition properties
       width: 0;
