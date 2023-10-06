@@ -48,6 +48,10 @@
     --box-shadow: 0 8px 30px 0 rgba(0, 58.00000000000005, 140, 0.22);
     --b-radius: 40px 0 40px 0;
     --b-radius-2: 0 40px 0 40px;
+
+
+    --main-gradient: linear-gradient(to top, #0c6dff, #0089ff, #009cf1, #00aada, #00b4c3);
+    --secondary-gradient: linear-gradient(to bottom, #0c6dff, #0089ff, #009cf1, #00aada, #00b4c3);
   }
 
   body {

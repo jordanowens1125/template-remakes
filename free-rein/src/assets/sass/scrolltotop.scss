@@ -4,7 +4,7 @@
   bottom: 1em;
   right: 1em;
   padding: 5px;
-  background: linear-gradient(127.08deg, var(--primary) 28.48%, var(--primary) 100.16%);
+  background: var(--main-gradient);
   border: none;
   transition: 1s;
   border-radius: 50%;
@@ -13,6 +13,7 @@
   display: none;
   align-items: center;
   justify-content: center;
+  transition: 0.3s;
 
   svg {
     fill: var(--bodyTextColorWhite);
@@ -22,4 +23,9 @@
     stroke: #ffffff; /* Background color against your svg */
     stroke-width: 20px; /*Between 1px and 2px*/
   }
+}
+
+#scroll-up:hover {
+  // background: var(--secondary-gradient);
+  transform: scale(1.08);
 }
