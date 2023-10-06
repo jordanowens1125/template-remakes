@@ -241,7 +241,8 @@
       gap: var(--p-lg);
     }
     a {
-      justify-content: end;
+      justify-content: end;margin: auto;
+      margin-right: 0;
     }
   }
 }
@@ -341,6 +342,8 @@
       justify-content: end;
       align-self: flex-end;
       grid-column: 1 / -1;
+      margin: auto;
+      margin-right: 0;
     }
   }
 }
