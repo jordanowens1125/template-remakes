@@ -208,7 +208,7 @@
 
 .projects {
   .group {
-    gap: var(--p-xl);
+    gap: var(--p-lg);
     text-align: left;
   }
   .item-h {
@@ -249,7 +249,7 @@
 @media screen and (min-width: 1000px) {
   .projects {
     .group {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);gap: var(--p-xl);
     }
   }
 }
@@ -291,7 +291,7 @@
     border-radius: var(--b-radius);
   }
   .group {
-    gap: var(--p-xl);
+    gap: var(--p-lg);
     text-align: left;
   }
   .item-h {
