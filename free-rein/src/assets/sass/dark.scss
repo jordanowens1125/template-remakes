@@ -14,8 +14,8 @@
   }
 
   body.dark-mode {
-    --primary-bg-color: #020d1f;
-    --footer-bg-color: var(var(--primary-bg-color))
+    --primary-bg-color: rgb(18, 39, 73);
+    --footer-bg-color: #1c1c1c;
     --light-bg: gray;
     --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 10px;
 
@@ -46,7 +46,7 @@
     }
 
     #cs-navigation {
-      // background-color: var(--dark);
+      background-color: var(--footer-bg-color);
       box-shadow: var(--box-shadow);
       border-bottom: 2px solid black;
       .cs-logo {
@@ -93,7 +93,7 @@
     }
     #footer {
       background: var(--footer-bg-color);
-      border-top: 2px solid var(--primary);
+      // border-top: 2px solid var(--primary);
     }
   }
 }

@@ -241,7 +241,8 @@
       gap: var(--p-lg);
     }
     a {
-      justify-content: end;margin: auto;
+      justify-content: end;
+      margin: auto;
       margin-right: 0;
     }
   }
@@ -250,7 +251,8 @@
 @media screen and (min-width: 1000px) {
   .projects {
     .group {
-      grid-template-columns: repeat(3, 1fr);gap: var(--p-xl);
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--p-xl);
     }
   }
 }
@@ -268,6 +270,15 @@
     opacity: 0.7;
   }
 }
+
+body.dark-mode {
+  .partners {
+    img {
+      filter: invert(1);
+    }
+  }
+}
+
 
 @media screen and (min-width: 900px) {
   .partners {

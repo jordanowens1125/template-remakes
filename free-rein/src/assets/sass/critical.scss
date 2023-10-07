@@ -52,6 +52,14 @@
   }
 }
 
+body.dark-mode{
+  #hero{
+    .bg-container{
+      display: none;
+    }
+  }
+}
+
 @media screen and (min-width: 450px) {
   #hero {
     .group {
