@@ -40,7 +40,7 @@
 
     --white: #fefeff;
     --black: #000;
-
+    --borderColor: var(var(--light-bg))
     --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   }
 
@@ -109,7 +109,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    border-radius: var(--b-radius);
+    // border-radius: var(--b-radius);
   }
 
   .bg-container{
@@ -176,6 +176,30 @@
   .button:hover {
     cursor: pointer;
   }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--primary) var(--borderColor);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--borderColor);
+    border-radius: 8px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 8px;
+    border: 3px solid var(--borderColor);
+  }
+
 
   // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
   .cs-topper {

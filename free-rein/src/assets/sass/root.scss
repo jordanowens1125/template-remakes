@@ -49,9 +49,22 @@
     --b-radius: 40px 0 40px 0;
     --b-radius-2: 0 40px 0 40px;
 
-
-    --main-gradient: linear-gradient(to top, #0c6dff, #0089ff, #009cf1, #00aada, #00b4c3);
-    --secondary-gradient: linear-gradient(to bottom, #0c6dff, #0089ff, #009cf1, #00aada, #00b4c3);
+    --main-gradient: linear-gradient(
+      to top,
+      #0c6dff,
+      #0089ff,
+      #009cf1,
+      #00aada,
+      #00b4c3
+    );
+    --secondary-gradient: linear-gradient(
+      to bottom,
+      #0c6dff,
+      #0089ff,
+      #009cf1,
+      #00aada,
+      #00b4c3
+    );
   }
 
   body {
@@ -69,7 +82,7 @@
     position: relative;
     text-align: center;
     .heading {
-      margin-bottom: var(--p-xl);
+      margin-bottom: var(--p-lg);
       font-size: clamp(1.8rem, 3vw, 3.5rem);
       color: var(--headerColor);
     }
@@ -79,16 +92,28 @@
       letter-spacing: 1.8px;
       font-weight: 600;
       font-size: 1.2rem;
-      margin-bottom: var(--p-xl);
+      margin-bottom: var(--p-lg);
     }
     .sub-h {
       margin: auto;
-      margin-bottom: var(--p-lg);
+      margin-bottom: var(--p-md);
       width: 85%;
       // color: var(--headerColor);
     }
     .banner-h {
       color: var(--headerColor);
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    section {
+      .heading,
+      .heading-2 {
+        margin-bottom: var(--p-xl);
+      }
+      .sub-h {
+        margin-bottom: var(--p-lg);
+      }
     }
   }
 

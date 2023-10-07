@@ -16,6 +16,7 @@
   body.dark-mode {
     background-color: var(--dark);
     --light-bg: gray;
+    --footer-bg-color: #1c1c1c;
     // dark mode variables
     p,
     li,
@@ -85,7 +86,7 @@
       }
     }
     #footer {
-      background: #061623;
+      background: var(--footer-bg-color);
     }
   }
 }
