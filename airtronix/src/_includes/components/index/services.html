@@ -2,10 +2,22 @@
   <div class="container">
     <div class="group">
       <div class="img-container">
-        <img
-          src="https://prohauz.bold-themes.com/plumbing/wp-content/uploads/sites/8/2018/09/inner_02.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            media="(min-width:650px)"
+            srcset="../../../assets/images/index/services.webp"
+          />
+          <source
+            media="(max-width:650px)"
+            srcset="../../../assets/images/index/services.webp"
+          />
+          <img
+            src="../../../assets/images/index/services.webp"
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
       </div>
       <div class="content">
         <h3 class="sub-h">Our Services</h3>

@@ -14,7 +14,8 @@
   }
 
   body.dark-mode {
-    background-color: var(--dark-bg);
+    // --primary-bg-color: #1a3552;
+    background-color: var(--primary-bg-color);
     --light-bg: gray;
     // dark mode variables
     p,

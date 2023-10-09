@@ -17,10 +17,22 @@
         <button class="cs-button-solid">Contact Us</button>
       </div>
       <div class="img-container">
-        <img
-          src="https://prohauz.bold-themes.com/plumbing/wp-content/uploads/sites/8/2018/09/background_transparent_01.png"
-          alt=""
-        />
+        <picture>
+          <source
+            media="(min-width:650px)"
+            srcset="../../../assets/images/index/hero-img.webp"
+          />
+          <source
+            media="(max-width:650px)"
+            srcset="../../../assets/images/index/hero-img-sm.webp"
+          />
+          <img
+            src="../../../assets/images/index/hero-img.webp"
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
       </div>
     </div>
   </div>
