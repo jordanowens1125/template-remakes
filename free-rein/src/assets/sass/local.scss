@@ -1,5 +1,57 @@
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 
+.services {
+  .item {
+    border: 1px var(--borderColor) solid;
+    padding: var(--p-md);
+    border-radius: var(--b-radius);
+    transition: 0.3s border;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .item-h {
+    text-transform: capitalize;
+    margin: 0;
+  }
+  .item:hover {
+    border: 1px solid var(--tertiary);
+    .item-h {
+      color: var(--tertiary);
+    }
+  }
+  .img-container {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 35%;
+    align-self: center;
+  }
+  img {
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .services {
+    .group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      gap: var(--p-lg);
+    }
+    .item:nth-child(1) {
+      border-radius: var(--b-radius);
+    }
+    .item:nth-child(2) {
+      border-radius: unset;
+      // height: 12;
+    }
+    .item:nth-child(3) {
+      border-radius:var(--b-radius-2);
+    }
+  }
+}
+
 .about-us {
   .group {
     gap: var(--p-lg);
@@ -278,7 +330,6 @@ body.dark-mode {
     }
   }
 }
-
 
 @media screen and (min-width: 900px) {
   .partners {

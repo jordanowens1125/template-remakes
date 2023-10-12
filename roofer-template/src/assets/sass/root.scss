@@ -8,17 +8,14 @@
 @media only screen and (min-width: 0em) {
   // Website colors
   :root {
-    --primary: #0c6dff;
-    --primaryLight: #2f7ff7dc;
+    --primary: red;
+    --primaryLight: #ffd675;
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
-    --headerColor: #001a40;
-    --tertiary: #00b4c3;
-    --tertiaryDark: #0394a1;
-
-    --bodyTextColor: #001a40b0;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
-    --bodyTextColorLight: #001a4070;
+
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -26,15 +23,14 @@
     --bodyFontSize: 1rem;
 
     /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1.5rem;
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 
-    --maxContainerWidth: 90rem;
+    --maxContainerWidth: 80rem;
 
     /* padding */
     --p-xs: 0.25rem;
-    --p-s: 0.5rem;
-    --p-sm: 1rem;
-    --p-md: 1.5rem;
+    --p-sm: 0.5rem;
+    --p-md: 1rem;
     --p-lg: 2.4rem;
     --p-xl: 4rem;
 
@@ -44,87 +40,51 @@
 
     --white: #fefeff;
     --black: #000;
-
-    --box-shadow: 0 8px 30px 0 rgba(0, 58.00000000000005, 140, 0.22);
-    --b-radius: 40px 0 40px 0;
-    --b-radius-2: 0 40px 0 40px;
-    --borderColor: #D3D3D3;
-    --main-gradient: linear-gradient(
-      to top,
-      #0c6dff,
-      #0089ff,
-      #009cf1,
-      #00aada,
-      #00b4c3
-    );
-    --secondary-gradient: linear-gradient(
-      to bottom,
-      #0c6dff,
-      #0089ff,
-      #009cf1,
-      #00aada,
-      #00b4c3
-    );
+    --borderColor: var(var(--light-bg))
+    --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   }
 
   body {
     background-color: var(--primary-bg-color);
     color: var(--bodyTextColor);
-    letter-spacing: 1.1px;
   }
 
-  // section:nth-child(even) {
-  //   background-color: var(--light-bg);
-  // }
+  section:nth-child(even) {
+    background-color: var(--light-bg);
+  }
 
   section {
     padding: var(--sectionPadding);
     position: relative;
-    text-align: center;
-    .heading {
-      margin-bottom: var(--p-lg);
-      font-size: clamp(1.8rem, 3vw, 3.5rem);
-      color: var(--headerColor);
-    }
-    .heading-2 {
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 1.8px;
-      font-weight: 600;
-      font-size: 1.2rem;
-      margin-bottom: var(--p-lg);
-    }
-    .sub-h {
-      margin: auto;
-      margin-bottom: var(--p-md);
-      width: 85%;
-      // color: var(--headerColor);
-    }
-    .banner-h {
-      color: var(--headerColor);
-    }
   }
 
-  @media screen and (min-width: 600px) {
-    section {
-      .heading,
-      .heading-2 {
-        margin-bottom: var(--p-xl);
-      }
-      .sub-h {
-        margin-bottom: var(--p-lg);
-      }
-    }
+  .heading {
+    margin-bottom: var(--p-md);
+    font-size: clamp(1.75rem, 2.5vw, 4rem);
   }
+  .heading-2{
+    
+  }
+  .sub-h {
+    margin-bottom: 1.5rem;
+  }
+  .banner-h{
 
+  }
+  .item-h-2 {
+  }
+  .item-sub{
+
+  }
+  .item-sub-2{
+
+  }
   .header-logo {
     font-size: clamp(1rem, 2vw, 3.25rem);
   }
 
   .container {
     max-width: var(--maxContainerWidth);
-    margin: auto;
-    position: relative;
   }
 
   .group {
@@ -135,63 +95,26 @@
     gap: var(--p-md);
   }
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: var(--p-md);
-    height: 100%;
-    width: 100%;
-  }
-
-  .content-group {
-    display: flex;
-    flex-direction: column;
-    gap: var(--p-sm);
-    height: 100%;
-    width: 100%;
-  }
-
   .item {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: var(--p-sm);
   }
 
-  .item-h {
-    color: var(--headerColor);
-    // line-height: 1.4rem;
-    // letter-spacing: 0.1px;
-    font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-    font-weight: 600;
-    margin: var(--p-sm) 0;
-    transition: 0.4s;
-  }
-  .link,
-  .link-2 {
-    transition: 0.3s;
-  }
-  .link:hover {
-    padding-left: var(--p-s);
-    color: var(--tertiaryDark);
-  }
-  .link-2 {
-    padding-right: var(--p-s);
-  }
-  .link-2:hover {
-    padding-right: 0;
-    color: var(--tertiaryDark);
-  }
-  // .item-h:hover {
-  //   color: var(--primary);
-  // }
-
   /* img */
-  .img-container,
-  .bg-container {
+  .img-container {
     height: 100%;
     width: 100%;
     position: relative;
     overflow: hidden;
+    // border-radius: var(--b-radius);
+  }
+
+  .bg-container{
+    height: 100%;
+    width: 100%;
   }
   img,
   picture {
@@ -225,20 +148,8 @@
 
   a {
     text-decoration: none;
-    color: var(--tertiary);
-    // text-transform: uppercase;
-    letter-spacing: 1.1px;
-    position: relative;
+    color: inherit;
   }
-
-  // a::after {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   background-color: pink;
-  //   width: 100%;
-  //   height: 10px;
-  // }
 
   /* Text color */
   .primary {
@@ -260,17 +171,35 @@
     fill: var(--bodyTextColorWhite);
   }
 
-  @mixin box-shadow {
-    -webkit-box-shadow: var(--box-shadow);
-    -moz-box-shadow: var(--box-shadow);
-    box-shadow: var(--box-shadow);
-  }
-
   a:hover,
   button:hover,
   .button:hover {
     cursor: pointer;
   }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--primary) var(--borderColor);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--borderColor);
+    border-radius: 8px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 8px;
+    border: 3px solid var(--borderColor);
+  }
+
 
   // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
   .cs-topper {
@@ -281,6 +210,9 @@
     font-weight: 700;
     color: var(--secondary);
     display: block;
+  }
+  .cs-icon{
+    
   }
 
   .cs-title {
@@ -302,23 +234,22 @@
 
   // Button - can be replaced using CodeStitch's "Button" Stitches
   .cs-button-solid {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: calc(16 / 16 * 1rem);
+    font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
     width: auto;
-    // line-height: calc(50 / 16 * 1em);
-    // height: calc(50 / 16 * 1rem);
+    line-height: calc(50 / 16 * 1em);
+    height: calc(50 / 16 * 1rem);
     text-align: center;
-    padding: 0.8rem calc(20 / 16 * 1rem);
+    padding: 0 calc(30 / 16 * 1rem);
     position: relative;
     z-index: 1;
-    background: var(--primary);
-    border-radius: 25px;
-    border: none;
+    background-color: var(--primary);
+
     // Transition Properties
-    color: #fff;
+    color: #000;
     transition: color 0.3s;
     transition-delay: 0.1s;
     overflow: hidden;
@@ -338,7 +269,7 @@
       top: 0;
       left: 0;
       z-index: -1;
-      background: var(--main-gradient);
+      background-color: #000;
 
       //Transition properties
       width: 0;
@@ -392,14 +323,29 @@
     overflow-x: hidden;
   }
 
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     transition: background-color 0.3s;
+  }
+
+  .container {
+    position: relative;
+    width: 92%;
+    margin: auto;
   }
 
   p,
   li,
   a {
-    font-size: clamp(0.9rem, 1.1vw, 1.4rem);
+    font-size: calc(18 / 16 * 1rem);
+    line-height: 27/18em;
     margin: 0;
   }
 
@@ -460,7 +406,8 @@
     width: 100%;
     padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
-    background-color: var(--primary-bg-color);
+    box-sizing: border-box;
+    background-color: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
@@ -925,10 +872,11 @@
     padding: 0 calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
+    background-color: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
-    background-color: inherit;
+
     .cs-container {
       width: 100%;
       max-width: calc(1280 / 16 * 1rem);
