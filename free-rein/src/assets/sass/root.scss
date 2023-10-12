@@ -28,7 +28,7 @@
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1.5rem;
 
-    --maxContainerWidth: 90rem;
+    --maxContainerWidth: 80rem;
 
     /* padding */
     --p-xs: 0.25rem;
@@ -931,7 +931,7 @@
     background-color: inherit;
     .cs-container {
       width: 100%;
-      max-width: calc(1280 / 16 * 1rem);
+      max-width: var(--maxContainerWidth);
       margin: auto;
       display: flex;
       justify-content: flex-end;
