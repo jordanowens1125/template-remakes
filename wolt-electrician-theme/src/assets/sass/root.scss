@@ -8,12 +8,12 @@
 @media only screen and (min-width: 0em) {
   // Website colors
   :root {
-    --primary: #f3d514;
-    --primaryLight: #ffd675;
+    --primary: #ffdb0d;
+    --primaryLight: rgb(248, 218, 146);
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
-    --headerColor: #202020;
-    --bodyTextColor: #4e4b66;
+    --headerColor: #0e0d0d;
+    --bodyTextColor: #4f4f52;
     --bodyTextColorWhite: #fafbfc;
 
     /* 13px - 16px */
@@ -31,12 +31,13 @@
     --p-xs: 0.25rem;
     --p-sm: 0.5rem;
     --p-md: 1rem;
+    --p-ml: 1.5rem;
     --p-lg: 2.4rem;
     --p-xl: 4rem;
 
     /* background colors */
-    --primary-bg-color: #f5f7fa;
-    --light-bg: rgb(250, 250, 255);
+    --primary-bg-color: #fcfcfc;
+    --light-bg: #f8f8f8;
 
     --white: #fefeff;
     --black: #000;
@@ -49,9 +50,9 @@
     color: var(--bodyTextColor);
   }
 
-  section:nth-child(even) {
-    background-color: var(--light-bg);
-  }
+  // section:nth-child(even) {
+  //   background-color: var(--light-bg);
+  // }
 
   section {
     padding: var(--sectionPadding);
@@ -61,12 +62,37 @@
   .heading {
     margin-bottom: var(--p-md);
     font-size: clamp(1.75rem, 2.5vw, 4rem);
+    margin: auto;text-align: center;
+    color: var(--headerColor);
   }
   .heading-2{
-    
+    margin-bottom: var(--p-md);
+    font-size: clamp(1.75rem, 2.5vw, 4rem);
+    margin: auto;text-align: center;
+    color: var(--headerColor);
   }
   .sub-h {
-    margin-bottom: 1.5rem;
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    margin-bottom: var(--p-lg);
+    display: block;
+    position: relative;
+    font-size: clamp(1.2rem, .9vw, 1.4rem);
+    text-transform: uppercase;
+    color: var(--headerColor);
+    z-index: 5;
+  }
+  .sub-h::after{
+    content: '';
+    display: block;
+    height: 15px;
+    background-color: var(--primary);
+    width: 100%;
+    bottom: 0rem;
+    position: absolute;
+    z-index: -1;
+    
   }
   .banner-h{
 
@@ -92,8 +118,18 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+    gap: var(--p-lg);
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
     gap: var(--p-md);
   }
+.content-group{
+  display: flex;
+  flex-direction: column;
+  gap: var(--p-lg);
+}
 
   .item {
     display: flex;
