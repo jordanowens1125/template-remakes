@@ -38,7 +38,7 @@
     /* background colors */
     --primary-bg-color: #fcfcfc;
     --light-bg: #f8f8f8;
-
+    --dark-bg: #202020;
     --white: #fefeff;
     --black: #000;
     --borderColor: var(var(--light-bg))
@@ -96,6 +96,10 @@
   }
   .banner-h{
 
+  }
+  .item-h{
+    // font-weight: bold;
+    font-size: clamp(1.5rem, 2.4vw, 2.3rem);
   }
   .item-h-2 {
   }
@@ -280,14 +284,14 @@
     position: relative;
     z-index: 1;
     background-color: var(--primary);
-
+    border: none;
     // Transition Properties
     color: #000;
     transition: color 0.3s;
     transition-delay: 0.1s;
     overflow: hidden;
     &:hover {
-      color: var(--primary);
+      color: var(--white);
       &:before {
         width: 100%;
       }
@@ -302,7 +306,7 @@
       top: 0;
       left: 0;
       z-index: -1;
-      background-color: #fff;
+      background-color: var(--dark-bg);
 
       //Transition properties
       width: 0;
@@ -1104,7 +1108,8 @@
   #cta {
     position: relative;
     padding: calc(50 / 16 * 1rem) 0;
-
+    background-color: var(--primary);
+    color: var(--dark-bg);
     &:before {
       content: "";
       position: absolute;
@@ -1144,20 +1149,29 @@
       font-weight: 900;
       font-size: min(9vw, 3rem);
       line-height: 58/48;
-      color: #fff;
       position: relative;
       margin-bottom: calc(36 / 16 * 1rem);
       text-align: center;
     }
 
     p {
-      color: #fff;
       text-align: center;
       opacity: 1;
       margin: auto;
       margin-bottom: calc(36 / 16 * 1rem);
       width: 96%;
       max-width: calc(598 / 16 * 1rem);
+    }
+    .cs-button-solid{
+      background-color: var(--dark-bg);
+      color: var(--bodyTextColorWhite);
+    }
+    
+    .cs-button-solid::before{
+      background-color: var(--bodyTextColorWhite);
+    }
+    .cs-button-solid:hover{
+      color: var(--dark-bg);
     }
   }
 }
