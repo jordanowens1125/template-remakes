@@ -180,7 +180,10 @@
     border-radius: inherit;
   }
   /*  */
-
+  input,textarea{
+    padding: var(--p-md);
+    border: none
+  };
   /* root info */
   ul {
     list-style: none;
@@ -1150,7 +1153,7 @@
       font-size: min(9vw, 3rem);
       line-height: 58/48;
       position: relative;
-      margin-bottom: calc(36 / 16 * 1rem);
+      // margin-bottom: calc(36 / 16 * 1rem);
       text-align: center;
     }
 
@@ -1158,7 +1161,7 @@
       text-align: center;
       opacity: 1;
       margin: auto;
-      margin-bottom: calc(36 / 16 * 1rem);
+      // margin-bottom: calc(36 / 16 * 1rem);
       width: 96%;
       max-width: calc(598 / 16 * 1rem);
     }

@@ -638,13 +638,15 @@
       grid-template-columns: repeat(2, 1fr);
       gap: var(--p-xl);
     }
-    // .img-container{
-    //   grid-column: 1/-1;
-    // }
+    .img-container {
+      // grid-column: 1/-1;
+      padding: var(--p-md);
+    }
   }
 }
 
 .prices {
+  background-color: var(--light-bg);
   .group {
     margin-top: var(--p-lg);
   }
