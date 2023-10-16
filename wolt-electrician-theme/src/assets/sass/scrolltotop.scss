@@ -15,11 +15,11 @@
   justify-content: center;
 
   svg {
-    fill: var(--black);
+    fill: var(--dark-bg);
     color: inherit;
   }
   svg path {
-    stroke: var(--black); /* Background color against your svg */
+    stroke: var(--dark-bg); /* Background color against your svg */
     stroke-width: 20px; /*Between 1px and 2px*/
   }
 }
