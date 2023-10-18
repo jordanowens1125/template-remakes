@@ -54,7 +54,7 @@
 
         .cs-container {
             width: 100%;
-            max-width: calc(1280 / 16 * 1rem);
+            max-width: var(--maxContainerWidth);
             margin: auto;
         }
 

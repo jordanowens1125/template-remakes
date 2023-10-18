@@ -10,10 +10,10 @@
   :root {
     --primary: #067eef;
     --primaryLight: #ffd675;
-    --primaryDark:#021b35 ;
+    --primaryDark: #021b35;
     --secondary: #002a66;
     --secondaryLight: #001f3f;
-    --headerColor: #021b35 ;
+    --headerColor: #021b35;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
 
@@ -26,13 +26,13 @@
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 
-    --maxContainerWidth: 100rem;
+    --maxContainerWidth: 90rem;
 
     /* padding */
     --p-xs: 0.25rem;
     --p-sm: 0.5rem;
     --p-md: 1rem;
-    --p-ml:1.5rem;
+    --p-ml: 1.5rem;
     --p-lg: 2.4rem;
     --p-xl: 4rem;
 
@@ -60,9 +60,9 @@
     margin-bottom: var(--p-lg);
     font-size: clamp(2.2rem, 3.3vw, 3.2rem);
     color: var(--headerColor);
+    line-height: 4rem;
   }
-  .heading-2{
-    
+  .heading-2 {
   }
   .sub-h {
     margin-bottom: 1rem;
@@ -71,24 +71,33 @@
     padding: var(--p-xs) var(--p-md);
     border-radius: 5px;
     color: var(--bodyTextColorWhite);
-    font-size: .95rem;
-    letter-spacing: .2rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
   }
-  .banner-h{
-
+  .content {
+    .sub-h {
+      margin-bottom: var(--p-lg);
+    }
+    .heading {
+      margin-bottom: var(--p-sm);
+    }
+    .cs-button-solid {
+      margin-top: var(--p-lg);
+    }
   }
-  .item-h{
+  .banner-h {
+  }
+  .item-h {
     font-weight: bold;
     color: var(--headerColor);
+    font-size: 1.75rem;
   }
   .item-h-2 {
   }
-  .item-sub{
-
+  .item-sub {
   }
-  .item-sub-2{
-
+  .item-sub-2 {
   }
   .header-logo {
     font-size: clamp(1rem, 2vw, 3.25rem);
@@ -105,20 +114,20 @@
     height: 100%;
     gap: var(--p-md);
   }
-  .content-group{
+  .content-group {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
     gap: var(--p-md);
   }
-  
-  .content{
+
+  .content {
     display: flex;
     flex-direction: column;
     gap: var(--p-sm);
   }
-  .content-group{
+  .content-group {
     display: flex;
     flex-direction: column;
     gap: var(--p-sm);
@@ -139,7 +148,7 @@
     // border-radius: var(--b-radius);
   }
 
-  .bg-container{
+  .bg-container {
     height: 100%;
     width: 100%;
   }
@@ -227,7 +236,6 @@
     border: 3px solid var(--borderColor);
   }
 
-
   // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
   .cs-topper {
     font-size: var(--topperFontSize);
@@ -275,11 +283,12 @@
     overflow: hidden;
     // Transition Properties
     color: var(--bodyTextColorWhite);
-    transition:  0.3s;
+    transition: 0.3s;
     transition-delay: 0.1s;
     overflow: hidden;
     &:hover {
-      color: #fff;background-color: var(--secondary);
+      color: #fff;
+      background-color: var(--secondary);
       &:before {
         width: 100%;
       }
@@ -294,7 +303,7 @@
       top: 0;
       left: 0;
       z-index: -1;
-      
+
       border-radius: inherit;
       //Transition properties
       width: 0;
@@ -370,7 +379,7 @@
   li,
   a {
     font-size: calc(18 / 16 * 1rem);
-    line-height: 27/18em;
+    line-height: 36/18em;
     margin: 0;
   }
 

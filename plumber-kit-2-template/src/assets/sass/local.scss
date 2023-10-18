@@ -31,7 +31,7 @@
     line-height: 3rem;
   }
   a {
-    margin-top: var(--p-md);
+    margin-top: var(--p-lg);
     width: fit-content;
     height: fit-content;
     overflow: unset;
@@ -55,7 +55,7 @@
     color: inherit;
   }
   i {
-    font-size: clamp(3rem, 6vw, 4rem);
+    font-size: clamp(1rem, 2vw, 3rem);
   }
   .item {
     flex-direction: row;
@@ -63,14 +63,18 @@
     gap: var(--p-md);
     z-index: 5;
   }
+  .item-h{
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+  }
   .group {
     gap: var(--p-xl);
     position: relative;
   }
   .content-group {
     position: relative;
-    margin-top: var(--p-lg);
-    gap: var(--p-lg);
+    margin-top: var(--p-xl);
+    gap: var(--p-md);
   }
   .bg-text {
     position: absolute;
@@ -117,7 +121,7 @@
   .expertise {
     .content-group {
       padding-bottom: var(--p-xl);
-      gap: var(--p-xl);
+      gap: var(--p-lg);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
@@ -128,7 +132,7 @@
   .expertise {
     .group {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 4fr 6fr;
     }
     .content {
       order: 2;
@@ -147,10 +151,9 @@
   }
   .cs-button-solid {
     width: fit-content;
-    margin-top: var(--p-md);
   }
   .heading {
-    margin: 0;
+    margin: var(--p-s);
   }
   .img-container-group {
     display: flex;
@@ -194,7 +197,7 @@
   .objective {
     .group {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 5.5fr 4.5fr;
       gap: var(--p-xl);
     }
     .content {
@@ -287,10 +290,12 @@
   .banner {
     .group {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 4.5fr 5.5fr;
+      justify-content: center;
     }
     .img-container {
       display: block;
+      margin: auto;
     }
     .content {
       justify-content: center;
@@ -331,7 +336,7 @@
     border-radius: 50%;
     grid-area: img;
     aspect-ratio: 1;
-    min-width: 100px;
+    min-width: 3rem;
   }
   img {
     object-fit: cover;
@@ -339,10 +344,13 @@
   .item-h {
     grid-area: name;
     margin-top: auto;
+    font-size: 1.2rem;
   }
   .role {
     grid-area: role;
     margin-bottom: auto;
+    opacity: .8;
+    font-size: .9rem;
   }
   .group {
     margin-top: var(--p-lg);
