@@ -15,7 +15,6 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
-    margin-bottom: var(--p-lg);
   }
   img {
     width: 40%;
@@ -132,7 +131,7 @@
   .expertise {
     .group {
       display: grid;
-      grid-template-columns: 4fr 6fr;
+      grid-template-columns: 5.5fr 4.5fr;
     }
     .content {
       order: 2;
