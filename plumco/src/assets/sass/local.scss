@@ -324,7 +324,7 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   #blue-banner {
     .container {
       display: grid;
@@ -333,8 +333,8 @@
         "stat group";
       .heading {
         text-align: left;
-        max-width: 60%;
         margin-left: 0;
+        max-width: 60%;
       }
       text-align: left;
       .group {
@@ -343,6 +343,7 @@
     }
   }
 }
+
 
 .projects {
   text-align: center;
@@ -543,7 +544,6 @@
     }
   }
 }
-
 
 // Dedicated Members
 #dedicated-members {
