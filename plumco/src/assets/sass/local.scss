@@ -513,7 +513,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
     .tabs {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
@@ -527,13 +527,23 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
   .projects {
     .tabs {
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .projects {
+    .tabs {
+      grid-template-columns: repeat(4, 1fr);
+      width: fit-content;
+    }
+  }
+}
+
 
 // Dedicated Members
 #dedicated-members {

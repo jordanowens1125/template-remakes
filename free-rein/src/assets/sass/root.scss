@@ -607,7 +607,7 @@
     .cs-ul-wrapper {
       height: 100vh;
       opacity: 0;
-      background-color: #fff;
+      background-color: var();
       box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
       overflow: hidden;
       position: absolute;
@@ -628,7 +628,7 @@
       width: auto;
       min-width: 40%;
       height: 65vh;
-      overflow: scroll;
+      overflow: auto;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
