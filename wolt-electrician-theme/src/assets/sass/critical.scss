@@ -96,7 +96,7 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #hero-1059 {
-    min-height: 90vh;
+    min-height: 95vh;
     .cs-content {
       text-align: left;
       align-items: flex-start;
@@ -128,14 +128,17 @@
     }
     i {
       color: var(--primary);
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     .item {
-      flex-direction: row;
       justify-content: start;
       gap: var(--p-md);
+      text-align: center;
     }
   }
+  // .item-h{
+  //   font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  // }
 }
 
 @media screen and (min-width: 600px) {
@@ -149,9 +152,8 @@
 
 @media screen and (min-width: 1200px) {
   .hero-services {
-    .container{
-        width: fit-content;
-        
+    .container {
+      width: fit-content;
     }
     .group {
       gap: var(--p-xl);
