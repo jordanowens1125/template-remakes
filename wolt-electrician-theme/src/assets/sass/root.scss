@@ -183,8 +183,13 @@
   /*  */
   input,textarea{
     padding: var(--p-md);
-    border: none
-  };
+    border: none;
+    resize: vertical; 
+    ;
+  }
+  textarea{
+    min-height: 100px
+  }
   /* root info */
   ul {
     list-style: none;
