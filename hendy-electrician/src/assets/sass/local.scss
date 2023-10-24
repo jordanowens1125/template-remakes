@@ -1,0 +1,74 @@
+/* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
+.about {
+  .cs-button-solid {
+    width: fit-content;
+  }
+  .item {
+    flex-direction: row;
+    img {
+      width: 20px;
+      filter: var(--filter);
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .about {
+    .group {
+      gap: var(--p-xl);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    .group {
+      display: grid;
+      grid-template-columns: 4fr 5fr;
+    }
+    .content {
+      padding: var(--p-lg) 0;
+    }
+    .img-container {
+      img {
+        object-fit: cover;
+        object-position: left;
+      }
+    }
+  }
+}
+
+.services {
+  .item {
+    box-shadow: var(--box-shadow);
+    padding: var(--p-md);
+    border-radius: var(--b-radius);
+  }
+
+  p {
+    padding: var(--p-md) var(--p-sm);
+    padding-bottom: var(--p-md);
+  }
+  .item-h {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .services {
+    .group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--p-lg);
+    }
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .services {
+    .group {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

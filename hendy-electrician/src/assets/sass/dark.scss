@@ -14,10 +14,9 @@
   }
 
   body.dark-mode {
-    --light-bg: rgb(32, 32, 32);
+    background-color: var(--dark);
+    --light-bg: gray;
     --footer-bg-color: #1c1c1c;
-    --primary-bg-color: #202020;
-    --headerColor: #fff;
     // dark mode variables
     p,
     li,
@@ -27,32 +26,23 @@
     h4,
     h5,
     h6 {
-      color: var(--white);
-    }
-
-    .sub-h {
-      color: var(--primary-bg-color);
-    }
-    .sub-h::after {
-      height: 100%;
+      color: #fff;
     }
 
     // hide all light classes
     .light {
       display: none;
     }
-    .item-h {
-      color: var(--white);
-    }
+
     // show all dark classes
     .dark {
       display: block !important;
     }
 
     #cs-navigation {
-      background-color: var(--footer-bg-color);
+      background-color: var(--dark);
       box-shadow: var(--box-shadow);
-      border-bottom: 1px solid black;
+      border-bottom: 2px solid black;
       .cs-logo {
         /* makes it white */
         filter: grayscale(1) brightness(1000%);
