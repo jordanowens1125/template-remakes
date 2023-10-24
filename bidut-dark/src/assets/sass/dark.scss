@@ -14,8 +14,10 @@
   }
 
   body.dark-mode {
-    background-color: var(--dark);
-    --light-bg: gray;
+    --primary-bg-color: #16171a;
+    --light-bg: #1d1e22;
+    --lighter-bg: #3a3a3b;
+    --borderColor:#414141;
     --footer-bg-color: #1c1c1c;
     // dark mode variables
     p,
@@ -40,9 +42,9 @@
     }
 
     #cs-navigation {
-      background-color: var(--dark);
       box-shadow: var(--box-shadow);
       border-bottom: 2px solid black;
+      color: var(--headerColor);
       .cs-logo {
         /* makes it white */
         filter: grayscale(1) brightness(1000%);

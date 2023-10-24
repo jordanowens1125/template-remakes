@@ -10,11 +10,11 @@
   :root {
     --primary: #dd0733;
     --primaryLight: #f83a60;
-    --primaryDark:#a50324;
+    --primaryDark: #a50324;
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
-    --headerColor: #fafafa;
-    --bodyTextColor: #afafaf;
+    --headerColor: #16171a;
+    --bodyTextColor: #e7e6e6;
     --bodyTextColorWhite: #fafbfc;
 
     /* 13px - 16px */
@@ -37,13 +37,21 @@
     --p-xl: 4rem;
 
     /* background colors */
+    // --primary-bg-color: #ffffff;
+    // --light-bg: #f3f3f3;
+    // --lighter-bg: #3a3a3b;
+    --white: #fefeff;
+    --black: #000;
+    // --borderColor: #414141;
+    // --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+
     --primary-bg-color: #16171a;
     --light-bg: #1d1e22;
     --lighter-bg: #3a3a3b;
-    --white: #fefeff;
-    --black: #000;
     --borderColor: #414141;
-    --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    --footer-bg-color: #1c1c1c;
+    --headerColor: #fafafa;
+    --footer-bg-color: #1c1c1c;
   }
 
   body {
@@ -78,7 +86,7 @@
   .item-h {
     font-size: 1.3rem;
     font-weight: bold;
-    color: var(--bodyTextColorWhite);
+    color: var(--headerColor);
   }
   .item-h-2 {
   }
@@ -119,7 +127,7 @@
     flex-direction: column;
     gap: var(--p-md);
   }
-  i{
+  i {
     font-size: 2.4rem;
   }
   /* img */
@@ -226,7 +234,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 700;
-    color: var(--secondary);
+    color: var(--primaryLight);
     display: block;
   }
 
@@ -364,10 +372,10 @@
     margin: 0;
   }
 
-  p,
-  li {
-    color: var(--bodyTextColor);
-  }
+  // p,
+  // li {
+  //   color: var(--bodyTextColor);
+  // }
 
   a,
   button {
@@ -422,11 +430,11 @@
     padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: var(--footer-bg-color);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
-
+    color: var(--bodyTextColorWhite);
     &:before {
       /* black blurred overlay */
       content: "";
@@ -643,10 +651,9 @@
       line-height: 1.2em;
       text-decoration: none;
       margin: 0;
-      color: var(--headerColor);
       display: inline-block;
       position: relative;
-
+      color: inherit;
       &:before {
         /* active state underline */
         content: "";
@@ -680,6 +687,7 @@
 /* Mobile - 1023px */
 @media only screen and (max-width: 63.9375rem) {
   #cs-navigation {
+    background-color: var(--primary-bg-color);
     .cs-dropdown {
       position: relative;
       color: var(--bodyTextColorWhite);
@@ -701,6 +709,7 @@
       .cs-li-link {
         position: relative;
         transition: opacity 0.3s;
+        color: inherit;
       }
     }
 
@@ -752,6 +761,8 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #cs-navigation {
+    background-color: var(--primary-bg-color);
+    color: var(--headerColor);
     .cs-dropdown {
       position: relative;
       &:hover {
@@ -858,10 +869,9 @@
         padding: calc(12 / 16 * 1rem);
         /* prevents padding from affecting height and width */
         box-sizing: border-box;
-        color: var(--bodyTextColor);
         display: block;
         transition: color 0.3s, background-color 0.3s;
-
+        color: inherit;
         &:hover {
           background-color: #f7f7f7;
         }
@@ -887,11 +897,13 @@
     padding: 0 calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: var(--primary-bg-color);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
     position: fixed;
     z-index: 10000;
-
+    color: var(--headerColor);
     .cs-container {
       width: 100%;
       max-width: calc(1280 / 16 * 1rem);
@@ -950,9 +962,9 @@
       line-height: 1.5em;
       text-decoration: none;
       margin: 0;
-      color: var(--bodyTextColor);
       display: block;
       position: relative;
+      color: inherit;
       &:hover {
         &:before {
           width: 100%;

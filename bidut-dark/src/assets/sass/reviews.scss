@@ -15,7 +15,9 @@
 			width: 96%;
 			max-width: calc(1320 / 16 * 1rem);
 		}
-
+		.cs-button-solid{
+			margin: auto;
+		}
 		.review {
 			padding: calc(64 / 16 * 1rem) calc(30 / 16 * 1rem) calc(18 / 16 * 1rem) calc(30 / 16 * 1rem);
 			box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
@@ -25,7 +27,7 @@
 			margin-bottom: calc(100 / 16 * 1rem);
 			border-radius: calc(5 / 16 * 1rem);
 			position: relative;
-			background: #fff;
+			background: var(--light-bg);
 			display: flex;
 			flex-direction: column;
 			&:last-of-type {
@@ -60,7 +62,6 @@
 				margin-top: auto;
 
 				.name {
-					color: #1a1a1a;
 					line-height: calc(24 / 16 * 1rem);
 					text-align: left;
 					font-weight: bold;
