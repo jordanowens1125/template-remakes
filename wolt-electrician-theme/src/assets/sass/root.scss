@@ -8,8 +8,8 @@
 @media only screen and (min-width: 0em) {
   // Website colors
   :root {
-    --primary: #ffdb0d;
-    --primaryLight: rgb(248, 218, 146);
+    --primary: #dd0d0d;
+    --primaryLight: #f35757;
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
     --headerColor: #0e0d0d;
@@ -295,7 +295,7 @@
     background-color: var(--primary);
     border: none;
     // Transition Properties
-    color: #000;
+    color: #fff;
     transition: color 0.3s;
     transition-delay: 0.1s;
     overflow: hidden;
@@ -1120,12 +1120,14 @@
     position: relative;
     padding: calc(50 / 16 * 1rem) 0;
     padding-bottom: 0;
-    color: var(--dark-bg);
+    color: #fff;
     
-
+    p{
+      color: inherit;
+    }
     .container {
       text-align: center;
-      z-index: 2;background-color: var(--primary);
+      z-index: 2;background-color: var(--dark-bg);
       padding: var(--sectionPadding);
     }
 
@@ -1163,17 +1165,17 @@
       width: 96%;
       max-width: calc(598 / 16 * 1rem);
     }
-    .cs-button-solid{
-      background-color: var(--dark-bg);
-      color: var(--bodyTextColorWhite);
-    }
+    // .cs-button-solid{
+    //   background-color: var(--dark-bg);
+    //   color: var(--bodyTextColorWhite);
+    // }
     
-    .cs-button-solid::before{
-      background-color: var(--bodyTextColorWhite);
-    }
-    .cs-button-solid:hover{
-      color: var(--dark-bg);
-    }
+    // .cs-button-solid::before{
+    //   background-color: var(--bodyTextColorWhite);
+    // }
+    // .cs-button-solid:hover{
+    //   color: var(--dark-bg);
+    // }
   }
 }
 

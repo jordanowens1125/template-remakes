@@ -25,11 +25,13 @@
       span {
         font-size: clamp(2.5rem, 3.4vw, 4.5rem);
         font-weight: bold;
-        color: var(--headerColor);
+        color: #fff;
       }
       p {
         font-weight: 600;
         font-size: clamp(1.15rem, 1.5vw, 3rem);
+        color: #fff;
+        opacity: .9;
       }
     }
   }
@@ -390,7 +392,7 @@
     color: var(--bodyTextColorWhite);
   }
   a {
-    color: var(--headerColor);
+    color: var(--bodyTextColorWhite);
     position: relative;
     width: fit-content;
     padding: var(--p-sm) var(--p-md);
@@ -580,7 +582,7 @@
     aspect-ratio: 1;
   }
   .item-h {
-    color: var(--primary);
+    color: var(--bodyTextColorWhite);
     font-size: 1.25rem;
   }
   .info {
