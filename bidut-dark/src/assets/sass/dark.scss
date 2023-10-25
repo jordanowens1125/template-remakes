@@ -42,8 +42,6 @@
     }
 
     #cs-navigation {
-      box-shadow: var(--box-shadow);
-      border-bottom: 2px solid black;
       color: var(--headerColor);
       .cs-logo {
         /* makes it white */
@@ -101,6 +99,7 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
     #dark-mode-toggle {
+      // filter: unset;
       .cs-sun {
         transform: translate(-50%, -50%);
         opacity: 1;
