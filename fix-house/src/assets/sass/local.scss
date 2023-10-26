@@ -135,7 +135,9 @@
   text-align: center;
   padding: 0;
   color: var(--white);
-
+  .heading {
+    color: inherit;
+  }
   .bg-img {
     position: absolute;
     inset: 0;
@@ -217,6 +219,9 @@
 
 .faqs {
   padding-bottom: 0;
+  .heading {
+    margin: 0;
+  }
   label {
     display: block;
     padding: var(--p-sm);

@@ -20,6 +20,9 @@
       color: var(--white);
     }
   }
+  .item-h {
+    font-style: italic;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -40,9 +43,6 @@
 }
 
 .about {
-  .cs-button-solid::before {
-    background-color: var(--primary-bg-color);
-  }
   .group {
     gap: var(--p-lg);
   }
@@ -134,18 +134,132 @@
   }
 }
 
-.why-choose-us {
+.objective {
+  .group {
+    gap: var(--p-lg);
+  }
+  .cs-button-solid {
+    width: fit-content;
+  }
+  .heading {
+    margin: var(--p-s);
+  }
+  .img-container-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-md);
+  }
+  // .img-container {
+  //   aspect-ratio: 1;
+  // }
+  img {
+    object-fit: cover;
+  }
+  .img-container {
+    position: relative;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 0;
+    p {
+      position: absolute;
+      padding: var(--p-md);
+      bottom: 0;
+      color: var(--primary);
+      background-color: var(--light-bg);
+      width: 100%;
+    }
+  }
+  .content-group {
+    .item {
+      padding: var(--p-md);
+      background-color: var(--light-bg);
+      align-items: center;
+    }
+    i {
+      color: var(--primary);
+    }
+    .item-h{
+      font-size: 1.2rem;
+    }
+  }
+
+  .content {
+    gap: var(--p-lg);
+  }
 }
 
-@media screen and (min-width: 786px) {
-  .why-choose-us {
+@media screen and (min-width: 600px) {
+  .objective {
+    .img-container-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .img-container {
+      position: relative;
+      p {
+        width: 100%;
+        height: 30%;
+      }
+    }
+    .content-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .objective {
     .group {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 4fr 6fr;
+      gap: var(--p-xl);
     }
     .content {
       padding: var(--p-lg) 0;
-      max-width: 80%;
+      padding-bottom: 0;
+      gap: var(--p-lg);
+    }
+    .img-container {
+      p {
+        height: 20%;
+      }
+    }
+  }
+}
+
+.clients {
+  text-align: center;
+  background-color: var(--primary) !important;
+  .img-container {
+    width: 80%;
+    margin: auto;
+  }
+  img {
+    transition: 0.4s;
+  }
+  .group {
+    margin-top: var(--p-lg);
+  }
+  img:hover {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .clients {
+    .group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients {
+    .group {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
@@ -157,6 +271,17 @@
   }
   img {
     object-fit: cover;
+    transition: 0.3s;
+  }
+  .img-container {
+    transition: 0.3s;
+    border: 1px solid transparent;
+  }
+  .img-container:hover {
+    border: 1px solid var(--primary);
+    img {
+      transform: scale(1.2);
+    }
   }
   .cs-button-solid {
     margin-top: var(--p-xl);
@@ -182,14 +307,32 @@
 }
 
 .accordion {
+  .accordion {
+    margin: auto;
+  }
+  .img-container {
+    display: grid;
+    grid-template-areas:
+      "one one"
+      "two three";
+    gap: var(--p-md);
+    height: fit-content;
+  }
+  .one {
+    grid-area: one;
+  }
+  img {
+    object-fit: cover;
+  }
   label {
     display: block;
-    padding: var(--p-sm);
+    padding: var(--p-sm) var(--p-md);
     color: var(--tertiary);
     cursor: pointer;
     border: 1px solid var(--borderColor);
     letter-spacing: 0.075rem;
     font-weight: bold;
+    transform: var(--skew);
   }
   label:hover {
     color: var(--primary);
@@ -220,10 +363,11 @@
   .accordion {
     .group {
       display: grid;
-      grid-template-columns: 5fr 4fr;
+      grid-template-columns: 4fr 5fr;
     }
-    .img-container {
-      height: fit-content;
+    .accordion {
+      padding: var(--p-lg) var(--p-md);
+      padding-left: 0;
     }
   }
 }
@@ -231,8 +375,6 @@
 @media screen and (min-width: 1024px) {
   .accordion {
     .group {
-      display: grid;
-
       gap: var(--p-xl);
     }
   }
@@ -306,6 +448,7 @@
     align-items: center;
     font-size: 1rem;
     transition: 0.4s;
+    transform: var(--skew);
   }
 }
 
@@ -394,11 +537,9 @@
   .cs-button-solid {
     background-color: var(--primary-bg-color);
   }
-  .cs-button-solid::before {
-    background-color: var(--white);
-  }
   .cs-button-solid:hover {
     color: var(--primary);
+    border: 2px solid transparent;
   }
   .heading {
     font-size: 2rem;

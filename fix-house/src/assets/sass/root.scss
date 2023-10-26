@@ -11,7 +11,7 @@
     --primary: #ff8e67;
     --primaryLight: #faf5f5;
     --secondary: #feb43b;
-    --secondaryLight: #001f3f;
+    --secondaryLight: #fff8ee;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
@@ -37,7 +37,7 @@
     --p-xl: 5rem;
 
     /* background colors */
-    --primary-bg-color: #fafafa;
+    --primary-bg-color: #fcfcfc;
     --light-bg: var(--primaryLight);
 
     --white: #fefeff;
@@ -68,13 +68,20 @@
   }
 
   .heading {
+    margin: auto;
     margin-bottom: var(--p-md);
     font-size: clamp(1.75rem, 2.5vw, 4rem);
+    color: var(--headerColor);
   }
   .heading-2 {
   }
   .sub-h {
     margin-bottom: 1.5rem;
+  }
+  @media screen and (min-width:768px){
+    .heading{
+      max-width: 75%;
+    }
   }
   .banner-h {
   }
@@ -415,7 +422,7 @@
     padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: inherit;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
@@ -880,7 +887,7 @@
     padding: 0 calc(16 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: inherit;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
