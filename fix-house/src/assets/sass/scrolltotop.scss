@@ -4,11 +4,7 @@
   bottom: 1em;
   right: 1em;
   padding: 5px;
-  background: linear-gradient(
-    127.08deg,
-    var(--primary) 28.48%,
-    var(--primary) 100.16%
-  );
+  background: var(--gradient-1);
   border: none;
   transition: 1s;
   border-radius: 50%;

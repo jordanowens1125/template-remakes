@@ -69,6 +69,7 @@
     align-items: unset;
     gap: var(--p-s);
     text-align: center;
+    justify-content: start;
   }
   .item-h {
     font-size: clamp(2.3rem, 2.9vw, 4rem);
@@ -134,7 +135,7 @@
   text-align: center;
   padding: 0;
   color: var(--white);
-  
+
   .bg-img {
     position: absolute;
     inset: 0;
@@ -187,9 +188,13 @@
 
 .projects {
   text-align: center;
-  .img-container{
+  background-color: var(--light-bg);
+  .img-container {
     border-radius: var(--b-radius);
     box-shadow: var(--box-shadow);
+  }
+  .cs-button-solid {
+    margin-top: var(--p-lg);
   }
 }
 
@@ -202,7 +207,6 @@
   }
 }
 
-
 @media screen and (min-width: 768px) {
   .projects {
     .group {
@@ -213,13 +217,12 @@
 
 .faqs {
   padding-bottom: 0;
-  text-align: center;
   label {
     display: block;
     padding: var(--p-sm);
-    color: var(--header-clr);
+    color: var(--white);
     cursor: pointer;
-    background-color: var(--borderColor);
+    background-color: var(--dark-bg);
     border-radius: 5px;
     padding: var(--p-md);
     font-weight: bold;
@@ -270,6 +273,73 @@
     }
     .accordion {
       order: 2;
+    }
+  }
+}
+
+.reviews {
+  text-align: center;
+  background-color: var(--light-bg);
+  .cs-button-solid {
+    margin-top: var(--p-lg);
+  }
+  .group {
+    margin-top: var(--p-ml);
+  }
+  i {
+    color: var(--primary);
+  }
+  .item {
+    padding: var(--p-md);
+    border-radius: var(--b-radius);
+    position: relative;
+    text-align: left;
+    align-items: start;
+    border: 1px var(--primary) dotted;
+  }
+  .item-h {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .item::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    height: 25px;
+    width: 90%;
+    background-color: var(--primary);
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: inherit;
+    z-index: -1;
+  }
+  .stars {
+    display: flex;
+    gap: var(--p-sm);
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: var(--p-sm);
+    .img-container {
+      width: 75px;
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      img {
+        object-fit: cover;
+        aspect-ratio: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .reviews {
+    .group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--p-lg);
     }
   }
 }

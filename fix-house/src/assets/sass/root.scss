@@ -9,7 +9,7 @@
   // Website colors
   :root {
     --primary: #ff8e67;
-    --primaryLight: #ffe5dc;
+    --primaryLight: #faf5f5;
     --secondary: #feb43b;
     --secondaryLight: #001f3f;
     --headerColor: #1a1a1a;
@@ -37,7 +37,7 @@
     --p-xl: 5rem;
 
     /* background colors */
-    --primary-bg-color: #f5f7fa;
+    --primary-bg-color: #fafafa;
     --light-bg: var(--primaryLight);
 
     --white: #fefeff;
@@ -48,11 +48,8 @@
     --dark-bg: #0d1e46;
     --gradient-1: linear-gradient(
       to right top,
-      #ff8e67,
-      #ff965d,
-      #ff9f52,
-      #ffa946,
-      #feb43b
+      var(--primary),
+      var(--secondary)
     );
   }
 
@@ -256,8 +253,9 @@
     padding: 0 calc(30 / 16 * 1rem);
     position: relative;
     z-index: 1;
+    // background-color: var(--secondary);
     background: var(--gradient-1);
-
+    border-radius: 8px;
     // Transition Properties
     color: #000;
     transition: color 0.3s;
