@@ -16,6 +16,8 @@
   body.dark-mode {
     --primary-bg-color: #082032;
     --light-bg: var(--secondaryDark);
+    --headerColor: var(--white);
+    color: #fff;
     // dark mode variables
     p,
     li,
@@ -25,7 +27,6 @@
     h4,
     h5,
     h6 {
-      color: #fff;
     }
     .sub-h {
       text-decoration: unset;

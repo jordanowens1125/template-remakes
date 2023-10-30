@@ -89,6 +89,14 @@
   }
 }
 
+body.dark-mode {
+  .services {
+    .item {
+      background-color: var(--primary-bg-color);
+    }
+  }
+}
+
 .about {
   --vertical-padding: var(--p-md);
   --spacing: var(--p-md);
@@ -239,6 +247,21 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px;
     transition: 0.4s;
+  }
+}
+
+body.dark-mode {
+  .features {
+    .item {
+      background-color: var(--primary-bg-color);
+      .item-h {
+        color: var(--white);
+      }
+      .count {
+        -webkit-text-fill-color: unset;
+        font-weight: normal;
+      }
+    }
   }
 }
 
@@ -401,22 +424,6 @@
     position: relative;
   }
 
-  .item::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 80%;
-    height: 2px;
-    background-color: var(--primary);
-    margin: auto;
-    transition: 0.4s;
-  }
-  .item:hover::after {
-    transform: scaleY(3);
-  }
-
   .img-container {
     border-radius: var(--b-radius);
     position: relative;
@@ -450,6 +457,18 @@
     align-items: center;
     font-size: 0.8rem;
     transition: 0.4s;
+  }
+}
+
+body.dark-mode {
+  .process {
+    .item {
+      background-color: var(--primary-bg-color);
+      border: none;
+      .img-container {
+        background-color: unset;
+      }
+    }
   }
 }
 
@@ -523,6 +542,7 @@
 
 .faqs {
   background-color: var(--light-bg);
+  padding-bottom: 0;
   .sub-h,
   .heading {
     margin: 0;
@@ -585,12 +605,21 @@
   }
 }
 
+body.dark-mode{
+  .faqs{
+    [id^="accordion"]:checked + label {
+    color: var(--white);
+  }
+  }
+}
+
+
 @media screen and (min-width: 48rem) {
   .faqs {
-    padding-bottom: 0;
+    padding: var(--sectionPadding);
     .group {
       display: grid;
-      grid-template-columns: 4.5fr 3.5fr;
+      grid-template-columns: 3fr 3.5fr;
       gap: var(--p-xl);
     }
     .img-container {
@@ -627,21 +656,6 @@
     padding: var(--p-ml);
     background-color: var(--light-bg);
     position: relative;
-  }
-  .item:hover::after {
-    transform: scaleY(3);
-  }
-  .item::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 90%;
-    height: 2px;
-    background-color: var(--primary);
-    margin: auto;
-    transition: 0.4s;
   }
   i {
     color: var(--primary);
