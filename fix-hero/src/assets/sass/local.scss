@@ -18,13 +18,40 @@
     justify-content: center;
     padding: var(--p-md) 0;
     max-width: 90%;
+    height: fit-content;
   }
   .item {
-    padding: var(--p-ml);
+    display: grid;
+    grid-template-rows: 16rem 1fr;
+    padding: 0;
+    padding-bottom: var(--p-ml);
     gap: var(--p-m);
     text-align: left;
     align-items: start;
     background-color: var(--white);
+    overflow: hidden;
+    border-radius: var(--b-radius);
+    p,
+    a {
+      padding: 0 var(--p-ml);
+    }
+  }
+  .item:hover{
+    img{
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-sm);
+  }
+  //
+  img {
+    object-fit: cover;
+    transition: .4s;
+    opacity: .9;
   }
   .item-h {
     font-size: 1.25rem;
@@ -100,7 +127,6 @@
       align-items: center;
     }
     .item-h {
-      color: var(--headerColor);
       margin: auto;
       margin-left: 0;
       margin-top: 0;
@@ -330,7 +356,7 @@
   }
   .item-h {
     color: inherit;
-    font-size: 2.5rem;
+    font-size: 3.25rem;
     font-weight: bold;
   }
   .group {
@@ -574,12 +600,15 @@
 }
 
 .reviews {
-  text-align: center;
   --spacing: var(--p-m);
   .content {
-    align-items: center;
+    grid-area: content;
   }
   .heading {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .sub-h {
     margin: 0;
   }
   .item {
@@ -621,7 +650,6 @@
   }
   .quote-1 {
     grid-area: heading;
-    color: var(--header-clr);
   }
   .quote-2 {
     background-color: var(--white);
@@ -654,7 +682,23 @@
   }
   .group {
     margin-top: var(--p-lg);
-    gap: var(--p-xl);
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .reviews {
+    .group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "content content"
+        ". ."
+        ". . ";
+    }
+    .content {
+      padding-top: var(--p-sm);
+      height: fit-content;
+    }
   }
 }
 
@@ -663,6 +707,14 @@
     .group {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "content . ."
+        "content . ."
+        "content . . ";
+    }
+    .content {
+      padding-top: var(--p-sm);
+      height: fit-content;
     }
   }
 }

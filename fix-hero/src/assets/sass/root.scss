@@ -122,7 +122,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    gap: var(--p-s);
+    gap: var(--p-sm);
     justify-content: center;
 
     .cs-button-solid {
@@ -221,28 +221,28 @@
     cursor: pointer;
   }
 
-  /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: var(--primary) var(--borderColor);
-  }
+  // /* ===== Scrollbar CSS ===== */
+  // /* Firefox */
+  // * {
+  //   scrollbar-width: auto;
+  //   scrollbar-color: var(--primary) var(--borderColor);
+  // }
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 10px;
-  }
+  // /* Chrome, Edge, and Safari */
+  // *::-webkit-scrollbar {
+  //   width: 10px;
+  // }
 
-  *::-webkit-scrollbar-track {
-    background: var(--borderColor);
-    border-radius: 8px;
-  }
+  // *::-webkit-scrollbar-track {
+  //   background: var(--borderColor);
+  //   border-radius: 8px;
+  // }
 
-  *::-webkit-scrollbar-thumb {
-    background-color: var(--primary);
-    border-radius: 8px;
-    border: 3px solid var(--borderColor);
-  }
+  // *::-webkit-scrollbar-thumb {
+  //   background-color: var(--primary);
+  //   border-radius: 8px;
+  //   border: 3px solid var(--borderColor);
+  // }
 
   // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
   .cs-topper {

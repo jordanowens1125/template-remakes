@@ -14,9 +14,8 @@
   }
 
   body.dark-mode {
-    background-color: var(--dark);
-    --light-bg: gray;
-    --footer-bg-color: #1c1c1c;
+    --primary-bg-color: #082032;
+    --light-bg: var(--secondaryDark);
     // dark mode variables
     p,
     li,
@@ -28,7 +27,9 @@
     h6 {
       color: #fff;
     }
-
+    .sub-h {
+      text-decoration: unset;
+    }
     // hide all light classes
     .light {
       display: none;
@@ -84,9 +85,6 @@
       &:after {
         display: none;
       }
-    }
-    #footer {
-      background: var(--footer-bg-color);
     }
   }
 }
