@@ -60,13 +60,12 @@
 
         .cs-content {
             /* set text align to left if content needs to be left aligned */
-            text-align: center;
             width: 100%;
             max-width: calc(630 / 16 * 1rem);
             display: flex;
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
+            // align-items: center;
         }
 
         .cs-title {
@@ -92,7 +91,10 @@
             margin: 0 0 calc(40 / 16 * 1rem) 0;
             color: #fff;
         }
+        .cs-button-solid{
+            width: fit-content;
 
+        }
         
     }
 }
