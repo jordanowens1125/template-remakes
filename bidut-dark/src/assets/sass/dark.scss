@@ -17,8 +17,9 @@
     --primary-bg-color: #16171a;
     --light-bg: #1d1e22;
     --lighter-bg: #3a3a3b;
-    --borderColor:#414141;
+    --borderColor: #414141;
     --footer-bg-color: #1c1c1c;
+    --secondary-bg: #252e42;
     // dark mode variables
     p,
     li,
@@ -34,6 +35,13 @@
     // hide all light classes
     .light {
       display: none;
+    }
+
+    .cs-button-solid {
+      border: 1px solid transparent;
+    }
+    .cs-button-solid:hover {
+      border: 1px solid var(--primary);
     }
 
     // show all dark classes
@@ -98,6 +106,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
+    color: inherit;
     #dark-mode-toggle {
       // filter: unset;
       .cs-sun {

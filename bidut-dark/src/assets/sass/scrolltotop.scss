@@ -4,11 +4,13 @@
   bottom: 1em;
   right: 1em;
   padding: 5px;
-  background: linear-gradient(127.08deg, var(--primary) 28.48%, var(--primary) 100.16%);
+  // background: linear-gradient(127.08deg, var(--primary) 28.48%, var(--primary) 100.16%);
+  background-color: var(--primary);
   border: none;
+  border-radius: 50%;
   transition: 1s;
-  height: 40px;
-  width: 40px;
+  height: 2.75rem;
+  width: 2.75rem;
   display: none;
   align-items: center;
   justify-content: center;
@@ -19,6 +21,6 @@
   }
   svg path {
     stroke: #ffffff; /* Background color against your svg */
-    stroke-width: 1px; /*Between 1px and 2px*/
+    stroke-width: .125rem; /*Between 1px and 2px*/
   }
 }

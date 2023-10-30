@@ -14,7 +14,7 @@
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
     --headerColor: #16171a;
-    --bodyTextColor: #e7e6e6;
+    --bodyTextColor: #252525;
     --bodyTextColorWhite: #fafbfc;
 
     /* 13px - 16px */
@@ -41,24 +41,31 @@
     // --light-bg: #f3f3f3;
     // --lighter-bg: #3a3a3b;
     --white: #fefeff;
-    --black: #000;
+    --black: #1d1e22;
     // --borderColor: #414141;
     // --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
 
-    --primary-bg-color: #16171a;
+    --primary-bg-color: #fafafa;
     --light-bg: #1d1e22;
     --lighter-bg: #3a3a3b;
     --borderColor: #414141;
     --footer-bg-color: #1c1c1c;
-    --headerColor: #fafafa;
+    // --headerColor: #fafafa;
     --footer-bg-color: #1c1c1c;
 
+    --light-bg: #fdfcfc;
+    --secondary-bg: #f2f7fa;
     --skew: skew(-8deg);
   }
 
   body {
     background-color: var(--primary-bg-color);
     color: var(--bodyTextColor);
+    p,
+    a,
+    li {
+      color: inherit;
+    }
   }
 
   section:nth-child(even) {
@@ -72,8 +79,9 @@
 
   .heading {
     margin-bottom: var(--p-md);
-    font-size: clamp(2.4rem, 2.5vw, 4rem);
+    font-size: 2.125rem;
     color: var(--headerColor);
+    line-height: 1.2;
   }
   .heading-2 {
   }
@@ -278,17 +286,14 @@
     border: 2px solid transparent;
     // Transition Properties
     color: #fff;
-    transition:  0.3s;
+    transition: 0.3s;
     transition-delay: 0.1s;
     transform-origin: left;
     overflow: hidden;
     &:hover {
       color: var(--white);
-      background-color: var(--light-bg);
-      border: 2px solid var(--primary);
+      background-color: var(--black);
     }
-
-    
   }
 }
 
@@ -296,32 +301,31 @@
 @media only screen and (min-width: 0em) {
   // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
 
- 
   /* dm-sans-700 - latin */
-    /* dm-sans-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/assets/fonts/dm-sans-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* dm-sans-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/assets/fonts/dm-sans-v14-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* dm-sans-900 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 900;
-  src: url('/assets/fonts/dm-sans-v14-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+  /* dm-sans-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/dm-sans-v14-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* dm-sans-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/dm-sans-v14-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* dm-sans-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 900;
+    src: url("/assets/fonts/dm-sans-v14-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
 
   body,
   html {
