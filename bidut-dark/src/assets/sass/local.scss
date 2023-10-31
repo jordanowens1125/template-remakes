@@ -44,6 +44,14 @@
   }
 }
 
+body.dark-mode{
+  .services{
+    .item{
+      border: 1px solid var(--borderColor);
+    }
+  }
+}
+
 .about {
   .group {
     gap: var(--p-lg);
@@ -74,7 +82,7 @@
       font-size: 2.4rem;
       color: var(--primary);
       padding: var(--p-md);
-      background-color: var(--white);
+      background-color: var(--primary-bg-color);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,6 +91,7 @@
       -moz-box-shadow: var(--box-shadow);
       -webkit-box-shadow: var(--box-shadow);
       box-shadow: var(--box-shadow);
+      // border: 1px var(--borderColor) solid;
     }
   }
 
