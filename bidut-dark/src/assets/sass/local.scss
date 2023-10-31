@@ -380,6 +380,15 @@
   }
 }
 
+body.dark-mode{
+  .accordion{
+    label{
+      border: 1px solid var(--borderColor);
+    }
+  }
+}
+
+
 .process {
   text-align: center;
   .group {
