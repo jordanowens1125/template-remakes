@@ -524,7 +524,7 @@ body.dark-mode {
     margin: 0;
   }
   .item {
-    padding: var(--p-xl) var(--p-md);
+    padding: var(--p-xl) var(--p-sm);
     border-radius: var(--b-radius);
     align-items: center;
     justify-content: center;
@@ -657,7 +657,7 @@ body.dark-mode {
   height: 100%;
   align-items: center;
   position: relative;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 
 iframe {

@@ -1,15 +1,16 @@
 {
-	"name": "4a Electrical Services LLC",
-	"email": "companyemail@domain.com",
-	"phoneForTel": "555-779-4407",
-	"phoneFormatted": "(555) 779-4407",
-	"address": {
-		"lineOne": "First Address Line",
-		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
-		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
-	},
-	"domain": "www.codestitch.app"
+  "name": "4A Electrical Services LLC",
+  "email": "companyemail@domain.com",
+  "phoneForTel": "555-779-4407",
+  "phoneFormatted": "(555) 779-4407",
+  "address": {
+    "lineOne": "First Address Line",
+    "lineTwo": "Second Address Line",
+    "city": "Denver",
+    "state": "CO",
+    "zip": "80206",
+    "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39",
+    "testLink": "https://www.google.com/maps/place/4A+Electrical+Services,+LLC/@29.52787,-98.7916265,17z/data=!3m1!4b1!4m6!3m5!1s0x865c6b2d3e6812ed:0x8e7ffd1ebaeea9cd!8m2!3d29.5278654!4d-98.7890516!16s%2Fg%2F11lkj402zw?entry=ttu"
+  },
+  "domain": "www.codestitch.app"
 }
