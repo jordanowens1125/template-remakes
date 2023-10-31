@@ -2,12 +2,14 @@
 
 .services {
   .item {
-    border: 1px solid var(--borderColor);
     padding: var(--p-ml);
     gap: var(--p-ml);
     transition: 0.3s;
     // align-items: center;
     // text-align: center;
+    -moz-box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
   }
   i {
     color: var(--primary);
@@ -78,6 +80,9 @@
       justify-content: center;
       aspect-ratio: 1;
       transition: 0.4s;
+      -moz-box-shadow: var(--box-shadow);
+      -webkit-box-shadow: var(--box-shadow);
+      box-shadow: var(--box-shadow);
     }
   }
 
@@ -313,18 +318,20 @@
   .one {
     grid-area: one;
   }
+
   img {
     object-fit: cover;
   }
   label {
     display: block;
     padding: var(--p-sm) var(--p-md);
-    color: var(--tertiary);
     cursor: pointer;
-    border: 1px solid var(--borderColor);
     letter-spacing: 0.075rem;
     font-weight: bold;
     transform: var(--skew);
+    -moz-box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
   }
   label:hover {
     color: var(--primary);
@@ -391,7 +398,9 @@
     padding: var(--p-lg);
     text-align: center;
     overflow: visible;
-    background-color: var(--secondary-bg);
+    -moz-box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
   }
 
   .item:hover {
@@ -417,6 +426,7 @@
     padding: var(--p-md);
     transition: 0.4s;
     background-color: var(--white);
+    
   }
 
   .item-h {
@@ -446,10 +456,9 @@
   }
 }
 
-
-body.dark-mode{
-  .process{
-    .item{
+body.dark-mode {
+  .process {
+    .item {
       background-color: var(--light-bg);
     }
   }
@@ -508,7 +517,6 @@ body.dark-mode{
     -moz-box-shadow: var(--box-shadow);
     -webkit-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
-    background-color: var(--secondary-bg);
   }
 
   // .item:after {
@@ -564,9 +572,9 @@ body.dark-mode{
   }
 }
 
-body.dark-mode{
-  .reviews{
-    .item{
+body.dark-mode {
+  .reviews {
+    .item {
       background-color: var(--light-bg);
     }
   }
