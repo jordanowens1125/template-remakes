@@ -9,7 +9,7 @@
   // Website colors
   :root {
     --primary: #ae0e0e;
-    --primaryLight: #f1244d;
+    --primaryLight: #d80b34;
     --primaryDark: #a50324;
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
@@ -91,7 +91,7 @@
     font-size: 1rem;
     letter-spacing: 0.075rem;
     font-weight: normal;
-    color: var(--primaryLight);
+    color: var(--primary);
   }
   .banner-h {
   }
