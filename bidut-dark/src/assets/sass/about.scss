@@ -30,7 +30,7 @@
 		}
 
 		.cs-picture {
-			border-radius: calc(24 / 16 * 1em);
+			// border-radius: calc(24 / 16 * 1em);
 			/* clips img tag corners */
 			overflow: hidden;
 			position: absolute;
@@ -94,7 +94,7 @@
 			/* 16px - 32px */
 			padding: clamp(1rem, 3vw, 2rem);
 			background-color: var(--light-bg);
-			border-radius: calc(16 / 16 * 1rem);
+			// border-radius: calc(16 / 16 * 1rem);
 			position: relative;
 		}
 
