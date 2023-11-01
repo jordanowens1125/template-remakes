@@ -18,8 +18,10 @@
   }
   .item:hover {
     background-color: var(--primary);
+    color: var(--white);
+    .item-h,
     i {
-      color: var(--white);
+      color: inherit;
     }
   }
   .item-h {
@@ -44,9 +46,9 @@
   }
 }
 
-body.dark-mode{
-  .services{
-    .item{
+body.dark-mode {
+  .services {
+    .item {
       border: 1px solid var(--borderColor);
     }
   }
@@ -389,14 +391,13 @@ body.dark-mode{
   }
 }
 
-body.dark-mode{
-  .accordion{
-    label{
+body.dark-mode {
+  .accordion {
+    label {
       border: 1px solid var(--borderColor);
     }
   }
 }
-
 
 .process {
   text-align: center;
@@ -413,7 +414,7 @@ body.dark-mode{
   }
 
   .item {
-    padding: var(--p-lg);
+    padding: var(--p-lg) var(--p-md);
     text-align: center;
     overflow: visible;
     -moz-box-shadow: var(--box-shadow);
@@ -444,7 +445,6 @@ body.dark-mode{
     padding: var(--p-md);
     transition: 0.4s;
     background-color: var(--white);
-    
   }
 
   .item-h {
@@ -524,7 +524,8 @@ body.dark-mode {
     margin: 0;
   }
   .item {
-    padding: var(--p-xl) var(--p-sm);
+    padding: var(--p-xl) var(--p-md);
+    padding-bottom: var(--p-lg);
     border-radius: var(--b-radius);
     align-items: center;
     justify-content: center;
@@ -657,7 +658,7 @@ body.dark-mode {
   height: 100%;
   align-items: center;
   position: relative;
-  min-height: 70vh;
+  min-height: 60vh;
 }
 
 iframe {
@@ -666,7 +667,6 @@ iframe {
   position: absolute;
   top: 0;
   left: 0;
-  zoom: 0.1;
 }
 
 .dark-mode iframe {
