@@ -513,7 +513,7 @@ body.dark-mode {
   }
   .img-container:hover {
     img {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
   .cs-button-solid {
@@ -521,20 +521,38 @@ body.dark-mode {
   }
 }
 
-@media screen and (min-width: 600px) {
+.projects {
+  text-align: center;
+  .group {
+    gap: var(--p-sm);
+  }
+  img {
+    object-fit: cover;
+  }
+  .cs-button-solid,
+  a {
+    grid-column: -1/1;
+    margin: auto;
+    margin-top: var(--p-md);
+  }
+  .lg {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 31.25rem) {
   .projects {
-    text-align: center;
     .group {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 200px;
     }
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 64rem) {
   .projects {
     .group {
-      display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -605,14 +623,13 @@ body.dark-mode {
   }
 }
 
-body.dark-mode{
-  .faqs{
+body.dark-mode {
+  .faqs {
     [id^="accordion"]:checked + label {
-    color: var(--white);
-  }
+      color: var(--white);
+    }
   }
 }
-
 
 @media screen and (min-width: 48rem) {
   .faqs {
